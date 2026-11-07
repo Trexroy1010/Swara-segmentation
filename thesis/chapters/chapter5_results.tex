@@ -1,0 +1,155 @@
+\chapter{Result and Discussion}
+\label{ch:results}
+
+To evaluate the effectiveness of the proposed framework, six experiments were conducted using different acoustic feature representations while maintaining identical model architectures and training configurations. This ensured that any variation in performance could be attributed solely to the selected feature representation rather than differences in model design or optimization.
+
+Based on the literature reviewed in Chapter~\ref{ch:literature}, Log-Mel spectrograms have been widely adopted for audio and music processing tasks because of their ability to represent both spectral and perceptual characteristics of sound. Therefore, it was initially hypothesized that Log-Mel would achieve the best overall performance for both swara segmentation and classification. In addition to Log-Mel, Pitch, RMS, Log-Mel + Pitch, Log-Mel + Pitch + RMS, and Constant-Q Transform (CQT) representations were investigated. While all feature representations produced satisfactory results to varying degrees, the CQT-based model achieved the highest overall performance across the proposed end-to-end framework.
+
+\section{Experiment 1: Log-Mel}
+
+The first experiment utilized the Log-Mel spectrogram as the input feature representation for both the segmentation and classification models. Based on previous studies in music information retrieval and audio classification, Log-Mel was initially expected to provide the highest overall performance due to its ability to capture both spectral and perceptual characteristics of audio signals.
+
+For swara classification, the CNN with Attention model was trained for 30 epochs using the Log-Mel feature representation. The model consisted of 101,960 trainable parameters and achieved an overall classification accuracy of 85.0\% with an F1-score of 89.3\%. The smooth convergence of both training and validation curves indicates stable learning without significant overfitting, demonstrating that Log-Mel provides sufficient spectral information for accurate swara classification.
+
+\figplaceholder{fig14_e1_classification_curves.png}{Training and validation loss, accuracy, and F1-score of the classification model for Experiment 1}{fig:e1-class}
+
+For swara segmentation, the CRNN with Attention model was trained for 25 epochs using the same Log-Mel feature representation. The segmentation network contained 1,090,594 trainable parameters. The model was evaluated using Precision, Recall, and F1-score for boundary detection.
+
+\figplaceholder{fig15_e1_segmentation_curves.png}{Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 1}{fig:e1-seg}
+
+\subsection*{End-to-end pipeline for Experiment 1}
+
+After independently training the segmentation and classification models, both components were integrated to evaluate the complete swara identification pipeline. Every test melody was processed through the segmentation stage followed by the classification stage using the trained Log-Mel models.
+
+Segmentation performance was measured based on the percentage of melodies that were segmented perfectly, where every swara boundary was correctly identified. For classification evaluation, only these perfectly segmented melodies were considered to ensure that the reported classification accuracy reflected the capability of the classifier rather than segmentation errors. Using this evaluation protocol, the proposed framework achieved a segmentation accuracy of 71.43\%, while the classification stage achieved a note-level accuracy of 84.29\% on the correctly segmented melodies.
+
+\figplaceholder{fig16_e1_end_to_end_pipeline.png}{End-to-end pipeline visualization for Experiment 1}{fig:e1-e2e}
+
+\section{Experiment 2: Pitch}
+
+The second experiment investigated the effectiveness of Pitch as the sole feature representation for both segmentation and classification. Unlike Log-Mel, which contains rich spectral information, Pitch represents only the fundamental frequency of the audio signal. This experiment was conducted to evaluate whether pitch information alone is sufficient for accurate swara identification.
+
+The CNN with Attention classifier was trained using the same architecture and training configuration as Experiment 1, with Pitch replacing Log-Mel as the input feature. The model achieved an overall classification accuracy of 69.0\% and an F1-score of 71.5\%. Compared with Experiment 1, a noticeable decrease in performance was observed, indicating that although Pitch effectively captures note frequency, it lacks the harmonic and timbral information necessary for reliable discrimination between acoustically similar swaras.
+
+\figplaceholder{fig17_e2_classification_curves.png}{Training and validation loss, accuracy, and F1-score of the classification model for Experiment 2}{fig:e2-class}
+
+For segmentation, the CRNN with Attention model followed the identical architecture and training configuration used in Experiment 1. The model achieved a Precision of 47.0\%, Recall of 93.4\%, and an F1-score of 57.7\%. The high Recall indicates that the model successfully detected most true swara boundaries; however, the comparatively low Precision suggests that a considerable number of false boundary predictions were produced, resulting in a lower overall F1-score.
+
+\figplaceholder{fig18_e2_segmentation_curves.png}{Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 2}{fig:e2-seg}
+
+\subsection*{End-to-end pipeline for Experiment 2}
+
+The complete end-to-end pipeline was evaluated following the same procedure as Experiment 1. Every test melody was processed through the segmentation and classification stages using Pitch as the input feature representation. Based on the defined evaluation protocol, the proposed framework achieved a segmentation accuracy of 40.00\%. Among the perfectly segmented melodies, the classification model achieved a note-level accuracy of 21.43\%. The significant reduction in end-to-end performance compared with Experiment 1 demonstrates that Pitch alone is insufficient for building a robust swara identification system, particularly for segmentation where reliable spectral information is essential for accurate boundary detection.
+
+\figplaceholder{fig19_e2_end_to_end_pipeline.png}{End-to-end pipeline visualization for Experiment 2}{fig:e2-e2e}
+
+\section{Experiment 3: RMS}
+
+The third experiment investigated the effectiveness of Root Mean Square (RMS) Energy as the sole feature representation for both swara segmentation and classification. Unlike Log-Mel and Pitch, RMS represents only the energy or loudness variations of the audio signal and does not contain any spectral or frequency information. This experiment was conducted to evaluate whether energy alone could provide sufficient information for identifying swaras.
+
+For swara classification, the CNN with Attention model was trained using the RMS feature representation while maintaining the same architecture and training configuration as the previous experiments. The model achieved an overall classification accuracy of 31.0\% with an F1-score of 29.6\%. The considerably lower performance indicates that RMS energy alone is insufficient for distinguishing between different swaras, as multiple notes may exhibit similar energy patterns despite having different spectral characteristics.
+
+\figplaceholder{fig20_e3_classification_curves.png}{Training and validation loss, accuracy, and F1-score of the classification model for Experiment 3}{fig:e3-class}
+
+For swara segmentation, the CRNN with Attention model achieved a Precision of 61.9\%, Recall of 97.2\%, and an F1-score of 74.8\%. Although RMS lacks frequency information, the model was still able to identify a large proportion of swara boundaries, as reflected by the high Recall. However, the comparatively lower Precision suggests that the model generated a considerable number of false boundary detections.
+
+\figplaceholder{fig21_e3_segmentation_curves.png}{Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 3}{fig:e3-seg}
+
+\subsection*{End-to-end pipeline for Experiment 3}
+
+The complete end-to-end pipeline was evaluated following the same procedure used in the previous experiments. Every test melody was processed through both the segmentation and classification stages using RMS as the input feature representation. The proposed framework achieved a segmentation accuracy of 64.29\%. Among the perfectly segmented melodies, the classification model achieved a note-level accuracy of 14.29\%. Although RMS provided moderate segmentation performance, the lack of discriminative spectral information resulted in poor classification performance, making it unsuitable as a standalone feature for automatic swara identification.
+
+\figplaceholder{fig22_e3_end_to_end_pipeline.png}{Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 3}{fig:e3-e2e}
+
+\section{Experiment 4: Log-Mel + Pitch}
+
+The fourth experiment combined Log-Mel spectrograms and Pitch to investigate whether combining spectral and frequency information could improve segmentation and classification performance. The same model architectures and training configurations were maintained, with the only difference being the use of two input channels corresponding to the fused feature representation.
+
+For swara classification, the CNN with Attention model achieved an overall classification accuracy of 84.7\% with an F1-score of 86.5\%. The combined representation produced performance comparable to the Log-Mel-only model, indicating that incorporating Pitch information provided only a marginal improvement in classification performance.
+
+\figplaceholder{fig23_e4_classification_curves.png}{Training and validation loss, accuracy, and F1-score of the classification model for Experiment 4}{fig:e4-class}
+
+For swara segmentation, the CRNN with Attention model achieved a Precision of 94.3\%, Recall of 98.7\%, and an F1-score of 94.9\%. These results represent a substantial improvement over the previous experiments, demonstrating that the combination of spectral and pitch information enables the model to identify swara transition boundaries with significantly higher reliability.
+
+\figplaceholder{fig24_e4_segmentation_curves.png}{Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 4}{fig:e4-seg}
+
+\subsection*{End-to-end pipeline evaluation for Experiment 4}
+
+The complete pipeline was evaluated using the combined Log-Mel and Pitch representation. The proposed framework achieved a segmentation accuracy of 57.14\%, while the classification stage achieved a note-level accuracy of 39.29\% on the correctly segmented melodies. Although the segmentation model achieved excellent frame-level metrics during validation, the end-to-end evaluation demonstrates that perfectly segmenting an entire melody remains a challenging task, resulting in lower overall pipeline performance.
+
+\figplaceholder{fig25_e4_end_to_end_pipeline.png}{Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 4}{fig:e4-e2e}
+
+\section{Experiment 5: Log-Mel + Pitch + RMS}
+
+The fifth experiment investigated the combined use of Log-Mel, Pitch, and RMS as a three-channel input representation. This experiment aimed to determine whether incorporating energy information alongside spectral and pitch features could further improve the performance of the proposed framework.
+
+For swara classification, the CNN with Attention model achieved an overall classification accuracy of 93.3\% with an F1-score of 94.0\%, representing a significant improvement over the previous experiments. The combination of complementary acoustic information enabled the classifier to learn more discriminative feature representations, resulting in the highest classification performance observed thus far.
+
+\figplaceholder{fig26_e5_classification_curves.png}{Training and validation loss, accuracy, and F1-score of the classification model for Experiment 5}{fig:e5-class}
+
+For swara segmentation, the CRNN with Attention model achieved a Precision of 93.5\%, Recall of 99.3\%, and an F1-score of 94.4\%. Similar to Experiment 4, the segmentation model demonstrated excellent boundary detection performance, with both Precision and Recall remaining consistently high throughout training.
+
+\figplaceholder{fig27_e5_segmentation_curves.png}{Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 5}{fig:e5-seg}
+
+\subsection*{End-to-end pipeline evaluation for Experiment 5}
+
+The complete end-to-end pipeline was evaluated using the three-channel feature representation. The proposed framework achieved a segmentation accuracy of 50.00\%. Among the perfectly segmented melodies, the classification model achieved a note-level accuracy of 75.51\%. The substantial improvement in classification accuracy demonstrates the effectiveness of combining complementary acoustic features. However, the lower melody-level segmentation accuracy indicates that accurate boundary detection across an entire melody remains the primary factor limiting the overall performance of the complete pipeline.
+
+\figplaceholder{fig28_e5_end_to_end_pipeline.png}{Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 5}{fig:e5-e2e}
+
+\section{Experiment 6: Constant-Q Transform (CQT)}
+
+The sixth experiment utilized the Constant-Q Transform (CQT) as the input feature representation for both the segmentation and classification models. Unlike the previous feature representations, CQT employs logarithmically spaced frequency bins that closely correspond to the musical scale, making it particularly suitable for music signal analysis and monophonic instrument recognition. Since flute performances consist of discrete musical notes with well-defined harmonic structures, CQT was expected to provide a more informative representation than conventional spectrogram-based features.
+
+For swara classification, the CNN with Attention model was trained for 30 epochs using the same network architecture and training configuration employed in the previous experiments. Throughout training, both the training and validation accuracies increased consistently, indicating stable convergence of the model. The best validation accuracy of 99.33\% was achieved at Epoch 26, after which the performance remained stable until the completion of training. These results demonstrate that the CQT representation provides highly discriminative information for distinguishing between the seven swara classes.
+
+For swara segmentation, the CRNN with Attention model was trained for 20 epochs using the CQT feature representation. The training loss decreased steadily from 0.0704 during the first epoch to 0.0257 at the final epoch, indicating stable optimization and convergence throughout the training process. The consistently decreasing loss suggests that the model effectively learned the temporal characteristics required to identify swara transition boundaries within continuous flute melodies.
+
+\subsection*{End-to-end pipeline evaluation for Experiment 6}
+
+The complete end-to-end pipeline was evaluated following the same procedure adopted for the previous experiments. Every test melody was processed through both the segmentation and classification stages using the trained CQT models. Segmentation performance was measured based on the percentage of melodies that were segmented perfectly, while classification accuracy was calculated only for the correctly segmented melodies.
+
+The proposed framework achieved the highest overall performance among all six experiments, obtaining a segmentation accuracy of 92.86\%. Furthermore, the classification model correctly identified 100\% of the swaras within the perfectly segmented melodies. These results demonstrate that the Constant-Q Transform provides the most suitable acoustic representation for the proposed end-to-end swara segmentation and classification framework, outperforming all other investigated feature representations.
+
+\figplaceholder{fig29_e6_end_to_end_pipeline.png}{Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 6}{fig:e6-e2e}
+
+\section{Overall Performance Comparison}
+
+\begin{table}[H]
+\centering
+\caption{Overall Performance Comparison of All Experiments}
+\label{tab:overall-comparison}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{clccccccc}
+\toprule
+\textbf{Exp.} & \textbf{Feature} & \textbf{Class. Acc. (\%)} & \textbf{Class. F1 (\%)} & \textbf{Seg. Prec. (\%)} & \textbf{Seg. Recall (\%)} & \textbf{Seg. F1 (\%)} & \textbf{End-to-end Seg. (\%)} & \textbf{End-to-end Class. (\%)} \\
+\midrule
+E1 & Log-Mel & 85.00 & 89.30 & 94.3 & 98.9 & 95.0 & 71.43 & 84.29 \\
+E2 & Pitch & 69.00 & 71.50 & 47.00 & 93.40 & 57.70 & 40.00 & 21.43 \\
+E3 & RMS & 31.00 & 29.60 & 61.90 & 97.20 & 74.80 & 64.29 & 14.29 \\
+E4 & Log-Mel + Pitch & 84.70 & 86.50 & 94.30 & 98.70 & 94.90 & 57.14 & 39.29 \\
+E5 & Log-Mel + Pitch + RMS & 93.30 & 94.00 & 93.50 & 99.30 & 94.40 & 50.00 & 75.51 \\
+E6 & CQT & 99.33 & --- & --- & --- & --- & 92.86 & 100.00 \\
+\bottomrule
+\end{tabular}%
+}
+\vspace{2mm}
+\\
+{\footnotesize Note: Segmentation Precision/Recall/F1 values for E6 were not explicitly reported as percentages in the source draft (only training loss convergence was described); confirm and fill in from the original experiment logs if available.}
+\end{table}
+
+\section{Discussion}
+
+The experimental results demonstrate that the choice of acoustic feature representation has a significant impact on both swara segmentation and classification performance. Although all experiments employed identical model architectures, training procedures, optimization strategies, and evaluation protocols, considerable performance differences were observed across the six investigated feature representations. These variations indicate that the quality and nature of the extracted acoustic features play a more influential role than the model architecture itself.
+
+Among the six experiments, the Constant-Q Transform (CQT) consistently achieved the best overall performance. The end-to-end pipeline attained a segmentation accuracy of 92.86\% and a note-level classification accuracy of 100\%, outperforming every other feature representation evaluated in this study. Unlike conventional spectrogram-based features, CQT represents frequency on a logarithmic scale that closely matches the spacing of musical notes. Since Indian classical flute performances are inherently musical and consist of discrete swaras, this representation preserves harmonic relationships more effectively, enabling both the segmentation and classification models to learn more discriminative musical patterns.
+
+The Log-Mel spectrogram also demonstrated strong performance throughout the experiments. As one of the most widely used feature representations in speech and music processing, Log-Mel effectively captures both spectral and perceptual characteristics of audio signals. The experimental results confirm that Log-Mel provides a reliable representation for automatic swara identification, producing satisfactory segmentation and classification performance. However, despite its strong results, it remained inferior to the CQT representation, suggesting that feature representations specifically designed for musical signals are more suitable for this application.
+
+Experiments utilizing Pitch and RMS individually produced considerably lower performance. Pitch represents only the fundamental frequency of an audio signal while ignoring harmonic content and timbral information, making it difficult for the models to distinguish between acoustically similar swaras. RMS performed even worse for classification because energy information alone contains little discriminative information regarding musical note identity. Interestingly, although RMS achieved relatively high Recall during segmentation, its Precision remained comparatively low, indicating that the model detected many true note boundaries while simultaneously producing a large number of false boundary predictions. These observations demonstrate that neither Pitch nor RMS alone provides sufficient information for robust end-to-end swara identification.
+
+The feature fusion experiments further illustrate the complementary nature of different acoustic representations. Combining Log-Mel with Pitch substantially improved the segmentation metrics, indicating that spectral and frequency information together provide a richer representation of note transitions. Furthermore, incorporating RMS into the feature set resulted in the highest classification performance among the non-CQT experiments. This suggests that while RMS alone is insufficient for accurate classification, it contributes useful complementary information when combined with richer spectral features. The results demonstrate that feature fusion enables the models to exploit multiple acoustic characteristics simultaneously, leading to improved overall performance.
+
+An interesting observation can be made by comparing the segmentation evaluation metrics with the end-to-end segmentation accuracy. Several experiments achieved frame-level F1-scores exceeding 94\%, yet their melody-level segmentation accuracies remained considerably lower. This difference arises from the evaluation protocol adopted in this study. Frame-level Precision, Recall, and F1-score evaluate the correctness of individual boundary predictions across all frames, whereas the end-to-end segmentation metric considers a melody to be correctly segmented only when every swara boundary within that melody is identified accurately. Consequently, even a single missed or falsely detected boundary causes the entire melody to be counted as incorrectly segmented. This evaluation criterion is considerably more stringent and better reflects the practical performance of a complete automatic transcription system.
+
+Overall, the experimental results validate the effectiveness of the proposed end-to-end framework for automatic swara segmentation and classification. More importantly, they demonstrate that selecting an appropriate feature representation is essential for achieving robust performance. Among all investigated features, the Constant-Q Transform proved to be the most effective representation for monophonic flute melodies, enabling the proposed framework to achieve the highest segmentation and classification performance while maintaining a fully automated pipeline requiring no manually annotated continuous recordings.

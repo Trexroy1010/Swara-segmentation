@@ -1,0 +1,108 @@
+\documentclass[12pt,a4paper]{report}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{times}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{xcolor}
+\usepackage{float}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\onehalfspacing
+
+% Placeholder helper for figures not yet inserted
+\newcommand{\figplaceholder}[3]{%
+  \begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.8\textwidth}{\centering\vspace{3cm}
+    \textbf{[INSERT FIGURE HERE]}\\[0.3cm]
+    File suggestion: \texttt{\detokenize{#1}}\\
+    \vspace{3cm}}}
+    \caption{#2}
+    \label{#3}
+  \end{figure}
+}
+
+\title{\bfseries Automatic Swara Identification in Continuous Indian Classical Flute Melodies: A Comparative Analysis of Segmentation Techniques}
+\author{Akash \\ Department of Computer Science and Engineering \\ Sylhet Engineering College}
+\date{\today}
+
+\begin{document}
+
+% ---------- Title Page ----------
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\LARGE \bfseries Automatic Swara Identification in Continuous Indian Classical Flute Melodies: A Comparative Analysis of Segmentation Techniques\par}
+\vspace{2cm}
+{\large A Thesis Submitted in Partial Fulfillment of the Requirements for the Degree of\par}
+\vspace{0.5cm}
+{\large Bachelor of Science in Computer Science and Engineering\par}
+\vspace{2cm}
+{\large \textbf{Submitted by}\par}
+\vspace{0.3cm}
+{\large [Your Name] \\{} [Co-author Name(s), if any]\par}
+\vspace{2cm}
+{\large \textbf{Supervised by}\par}
+\vspace{0.3cm}
+{\large Md. Abu Naser Majumder \\ Head, Department of Computer Science and Engineering \\ Sylhet Engineering College\par}
+\vspace{2cm}
+{\large Department of Computer Science and Engineering\\
+Sylhet Engineering College\\
+(Affiliated with Shahjalal University of Science and Technology)\\
+Sylhet, Bangladesh\par}
+\vfill
+{\large \today\par}
+\end{titlepage}
+
+% ---------- Front matter ----------
+\pagenumbering{roman}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\input{chapters/abstract.tex}
+
+\chapter*{Acknowledgments}
+\addcontentsline{toc}{chapter}{Acknowledgments}
+\input{chapters/acknowledgments.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\clearpage
+\pagenumbering{arabic}
+
+% ---------- Chapters ----------
+\input{chapters/chapter1_introduction.tex}
+\input{chapters/chapter2_literature_review.tex}
+\input{chapters/chapter3_dataset.tex}
+\input{chapters/chapter4_methodology.tex}
+\input{chapters/chapter5_results.tex}
+\input{chapters/chapter6_limitations.tex}
+\input{chapters/chapter7_future_work.tex}
+\input{chapters/chapter8_conclusion.tex}
+
+% ---------- References ----------
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+\end{document}

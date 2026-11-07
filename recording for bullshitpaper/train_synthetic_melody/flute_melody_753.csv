@@ -1,0 +1,14 @@
+melody_file,note_sequence_idx,swara_label,start_time,end_time,transition_style,applied_dsp
+flute_melody_753.wav,0,sa,0.0,2.2933,phrase_start,pitch(-0.80)+vibrato
+flute_melody_753.wav,1,pa,2.2627,6.8796,slurred_crossfade,speed(1.18)+gain(0.62)+noise
+flute_melody_753.wav,2,pa,6.8014,8.5952,slurred_crossfade,speed(1.12)+vibrato+gain(0.75)+noise+glide
+flute_melody_753.wav,3,pa,8.5336,9.007,slurred_crossfade,pitch(1.32)+speed(1.11)+vibrato+gain(0.80)+noise
+flute_melody_753.wav,4,re,8.9132,9.9321,slurred_crossfade,speed(1.00)+noise+glide
+flute_melody_753.wav,5,ga,9.8684,10.8651,slurred_crossfade,pitch(1.30)+gain(0.90)+glide
+flute_melody_753.wav,6,dha,10.8328,12.046,slurred_crossfade,pitch(0.47)+speed(0.96)+vibrato+noise+glide
+flute_melody_753.wav,7,re,11.9558,13.3768,slurred_crossfade,speed(1.14)+vibrato+gain(0.82)+noise+glide
+flute_melody_753.wav,8,ma,13.3365,14.2339,slurred_crossfade,pitch(0.43)+speed(1.00)+vibrato+glide
+flute_melody_753.wav,9,ma,14.1942,14.7039,slurred_crossfade,pitch(0.32)+speed(1.14)+noise
+flute_melody_753.wav,10,ma,14.6293,15.6049,slurred_crossfade,pitch(0.70)+vibrato
+flute_melody_753.wav,11,dha,15.5192,16.4961,slurred_crossfade,pitch(-0.41)+speed(1.14)+vibrato+gain(1.04)
+flute_melody_753.wav,12,ni,16.7706,17.2003,articulated_with_breath,pitch(0.41)+speed(1.11)+vibrato+gain(0.61)+noise

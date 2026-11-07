@@ -1,0 +1,12 @@
+\chapter{Limitations}
+\label{ch:limitations}
+
+Although the proposed framework achieved promising results for automatic swara segmentation and classification, several limitations remain.
+
+First, the experiments were conducted exclusively using flute recordings. While the proposed synthetic data generation strategy and end-to-end pipeline were designed for monophonic musical instruments in general, the present study only validates the framework on flute audio. Consequently, although the methodology is expected to be applicable to other monophonic instruments, such as the violin, recorder, clarinet, or saxophone, additional experiments are required to verify its generalization capability.
+
+Second, the proposed system considers only the seven fundamental swaras (Sa, Re, Ga, Ma, Pa, Dha, and Ni). Expressive musical ornamentations commonly found in Indian classical music, including Meend, Gamak, Murki, and Kan Swara, were not incorporated into the current dataset or evaluation. As a result, the framework has not yet been assessed on more complex performance techniques.
+
+Third, although the synthetic melody generation process introduced variations through multiple transition styles and digital signal processing augmentations, synthetically generated melodies cannot perfectly reproduce every expressive characteristic of real-world performances. Variations in performer style, breathing techniques, articulation, and recording environments may introduce acoustic characteristics that are not fully represented in the generated dataset.
+
+Finally, the proposed framework assumes monophonic audio, where only a single note is present at any given time. Therefore, the current approach is not directly applicable to polyphonic music or recordings containing multiple simultaneous instruments without significant modifications to both the segmentation and classification stages.

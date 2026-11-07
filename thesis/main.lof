@@ -1,0 +1,37 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Folder structure of dataset}}{14}{figure.caption.6}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Class Distribution}}{14}{figure.caption.7}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Duration Distribution of Collected Swaras}}{15}{figure.caption.8}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Melody Duration Distribution}}{16}{figure.caption.11}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Distribution of Notes per Synthetic Melody}}{17}{figure.caption.12}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Count of different DSP augmentations used while creating the Synthetic Melody Dataset}}{18}{figure.caption.13}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Methodology Overview}}{20}{figure.caption.14}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces MFCC visualization of an individual note}}{21}{figure.caption.15}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Log-Mel spectrogram visualization of an individual note}}{22}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Pitch visualization of an individual note}}{22}{figure.caption.17}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces RMS energy visualization of an individual note}}{23}{figure.caption.18}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Constant-Q Transform visualization of an individual note}}{23}{figure.caption.19}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Architectural diagram of the attention mechanism}}{30}{figure.caption.25}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Training and validation loss, accuracy, and F1-score of the classification model for Experiment 1}}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 1}}{33}{figure.caption.28}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces End-to-end pipeline visualization for Experiment 1}}{34}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Training and validation loss, accuracy, and F1-score of the classification model for Experiment 2}}{35}{figure.caption.30}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 2}}{35}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces End-to-end pipeline visualization for Experiment 2}}{36}{figure.caption.32}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Training and validation loss, accuracy, and F1-score of the classification model for Experiment 3}}{37}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 3}}{37}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 3}}{38}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Training and validation loss, accuracy, and F1-score of the classification model for Experiment 4}}{39}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 4}}{39}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 4}}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Training and validation loss, accuracy, and F1-score of the classification model for Experiment 5}}{41}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.14}{\ignorespaces Training loss and boundary detection metrics (Precision, Recall, F1-score) of the segmentation model for Experiment 5}}{41}{figure.caption.40}%
+\contentsline {figure}{\numberline {5.15}{\ignorespaces Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 5}}{42}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.16}{\ignorespaces Example visualization of the end-to-end swara segmentation and classification pipeline for Experiment 6}}{43}{figure.caption.42}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

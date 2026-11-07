@@ -1,0 +1,249 @@
+\begin{thebibliography}{39}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Benetos et~al.(2013)Benetos, Dixon, Giannoulis, Kirchhoff, and
+  Klapuri]{ref1}
+Emmanouil Benetos, Simon Dixon, Dimitrios Giannoulis, Holger Kirchhoff, and
+  Anssi Klapuri.
+\newblock Automatic music transcription: challenges and future directions.
+\newblock \emph{Journal of Intelligent Information Systems}, 41\penalty0
+  (3):\penalty0 407--434, 2013.
+
+\bibitem[Benetos et~al.(2019)Benetos, Dixon, Duan, and Ewert]{ref2}
+Emmanouil Benetos, Simon Dixon, Zhiyao Duan, and Sebastian Ewert.
+\newblock Automatic music transcription: An overview.
+\newblock \emph{IEEE Signal Processing Magazine}, 36\penalty0 (1):\penalty0
+  20--30, 2019.
+
+\bibitem[Jamshidi et~al.(FIXME)]{ref3}
+Reza Jamshidi et~al.
+\newblock A systematic survey of automatic music transcription methods.
+\newblock \emph{FIXME -- verify journal/conference, year, volume, pages},
+  FIXME.
+
+\bibitem[Hawthorne et~al.(2018)Hawthorne, Elsen, Song, Roberts, Simon, Raffel,
+  Engel, Oore, and Eck]{ref4}
+Curtis Hawthorne, Erich Elsen, Jialin Song, Adam Roberts, Ian Simon, Colin
+  Raffel, Jesse Engel, Sageev Oore, and Douglas Eck.
+\newblock Onsets and frames: Dual-objective piano transcription.
+\newblock In \emph{Proceedings of the 19th International Society for Music
+  Information Retrieval Conference (ISMIR)}, 2018.
+
+\bibitem[de~Cheveign\'{e} and Kawahara(2002)]{ref5}
+Alain de~Cheveign\'{e} and Hideki Kawahara.
+\newblock Yin, a fundamental frequency estimator for speech and music.
+\newblock \emph{Journal of the Acoustical Society of America}, 111\penalty0
+  (4):\penalty0 1917--1930, 2002.
+
+\bibitem[Camacho and Harris(2008)]{ref6}
+Arturo Camacho and John~G. Harris.
+\newblock A sawtooth waveform inspired pitch estimator for speech and music.
+\newblock \emph{Journal of the Acoustical Society of America}, 124\penalty0
+  (3):\penalty0 1638--1652, 2008.
+
+\bibitem[Mauch and Dixon(2014)]{ref7}
+Matthias Mauch and Simon Dixon.
+\newblock pyin: A fundamental frequency estimator using probabilistic threshold
+  distributions.
+\newblock In \emph{Proceedings of the IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}, pages 659--663, 2014.
+
+\bibitem[Sofronievski and Gerazov(FIXME)]{ref8}
+Aleksandar Sofronievski and Branislav Gerazov.
+\newblock Scorpiano: A signal-processing pipeline for monophonic piano
+  transcription.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Th\'{o}me and Ahlb\"{a}ck(FIXME)]{ref9}
+Carl Th\'{o}me and Sven Ahlb\"{a}ck.
+\newblock A convlstm-based pitch detector for monophonic/polyphonic woodwind
+  transcription (mirex multi-f0 evaluation).
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Bittner et~al.(FIXME)]{ref10}
+Rachel~M. Bittner et~al.
+\newblock A lightweight instrument-agnostic model for polyphonic note
+  transcription and multipitch estimation.
+\newblock In \emph{FIXME -- verify venue, year}, FIXME.
+
+\bibitem[Loresco et~al.(FIXME)]{ref11}
+Paulo Joshua~M. Loresco et~al.
+\newblock Deep learning-based transcription of the diwdiw-as (filipino bamboo
+  panpipe).
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Jancovic et~al.(FIXME)Jancovic, K\"{o}k\"{u}er, and Baptiste]{ref12}
+Peter Jancovic, M\"{u}nevver K\"{o}k\"{u}er, and Wootton Baptiste.
+\newblock Automatic transcription of ornamented irish traditional flute music
+  using hidden markov models.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Sch\"{o}rkhuber and Klapuri(2010)]{ref13}
+Christian Sch\"{o}rkhuber and Anssi Klapuri.
+\newblock Constant-q transform toolbox for music processing.
+\newblock In \emph{Proceedings of the 7th Sound and Music Computing Conference
+  (SMC)}, 2010.
+
+\bibitem[Cheuk et~al.(FIXME)]{ref14}
+Kin~Wai Cheuk et~al.
+\newblock Comparison of input representations for neural automatic music
+  transcription systems.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Hernandez-Olivan et~al.(FIXME)]{ref15}
+Carlos Hernandez-Olivan et~al.
+\newblock Mel-based versus cqt-based salience representations for
+  multi-instrument transcription on slakh2100.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Hebbar and Jagtap(FIXME)]{ref16}
+Rutuja Hebbar and Anagha Jagtap.
+\newblock Preprocessing and deep architecture comparison for carnatic raga
+  recognition.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Wolf-Monheim(FIXME)]{ref17}
+Felix Wolf-Monheim.
+\newblock Evaluation of spectral and rhythm features for general-purpose audio
+  classification.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Schl\"{u}ter and B\"{o}ck(2014)]{ref18}
+Jan Schl\"{u}ter and Sebastian B\"{o}ck.
+\newblock Improved musical onset detection with convolutional neural networks.
+\newblock In \emph{Proceedings of the IEEE International Conference on
+  Acoustics, Speech and Signal Processing (ICASSP)}, pages 6979--6983, 2014.
+
+\bibitem[Eyben et~al.(FIXME)Eyben, B\"{o}ck, Schuller, and Graves]{ref19}
+Florian Eyben, Sebastian B\"{o}ck, Bj\"{o}rn Schuller, and Alex Graves.
+\newblock Universal onset detection with bidirectional long short-term memory
+  neural networks.
+\newblock \emph{FIXME -- verify venue (likely ISMIR), year, pages}, FIXME.
+
+\bibitem[\c{C}ak{\i}r et~al.(FIXME)]{ref20}
+Emre \c{C}ak{\i}r et~al.
+\newblock Convolutional recurrent neural networks (with frame-level attention)
+  for polyphonic sound event detection.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Wu et~al.(FIXME)]{ref21}
+Yu-Te Wu et~al.
+\newblock Self-attention for multi-instrument automatic music transcription as
+  instance segmentation.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Stasiak et~al.(FIXME)]{ref22}
+Bartlomiej Stasiak et~al.
+\newblock Fusion of onset detection functions via a multi-layer perceptron,
+  evaluated across seventeen instruments.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Mo\'{n}ko and Stasiak(FIXME)]{ref23}
+Hubert Mo\'{n}ko and Bartlomiej Stasiak.
+\newblock Cnn onset detection for bowed string instrument recordings.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Mounir et~al.(FIXME)]{ref24}
+Mohamed Mounir et~al.
+\newblock Ninos2: a spectral sparsity-based onset detection measure for
+  sustained-tone instruments.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Singh and Biswas(FIXME)]{ref25}
+Vishwa~Mohan Singh and Arpita Biswas.
+\newblock A review of computational approaches to indian classical music
+  analysis.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Bellur et~al.(FIXME)]{ref26}
+Ashwin Bellur et~al.
+\newblock Tonic identification in indian classical music using pitch-histogram
+  and group-delay based approaches.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Gulati et~al.(FIXME)]{ref27}
+Sankalp Gulati et~al.
+\newblock A comparative study of tonic identification methods in indian art
+  music.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Singh et~al.(FIXME{\natexlab{a}})]{ref28}
+Gopala~Krishna Singh et~al.
+\newblock A shruti-based chromagram representation for indian classical music.
+\newblock \emph{FIXME -- verify venue, year, volume, pages},
+  FIXME{\natexlab{a}}.
+
+\bibitem[Dighe et~al.(FIXME)]{ref29}
+Pratik Dighe et~al.
+\newblock Swara histogram features from chromagrams for raga/swara
+  classification.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Madhusudhan and Chowdhary(FIXME)]{ref30}
+Sathwik~Tejaswi Madhusudhan and Girish Chowdhary.
+\newblock Deepsrgm: Sequence classification and ranking in indian classical
+  music with deep learning.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Madhusudhan et~al.(FIXME)]{ref31}
+Sathwik~Tejaswi Madhusudhan et~al.
+\newblock Phononet: A multi-stage cnn pipeline for hindustani raga
+  identification.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Shah et~al.(FIXME)]{ref32}
+Sarthak Shah et~al.
+\newblock Raga classification using cnns on the compmusic ten-raga subset.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Singh and Arora(FIXME)]{ref33}
+Adhesh Singh and Vipul Arora.
+\newblock Explainable raga classification: identifying melodic phrases attended
+  to by deep models.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Nuttall et~al.(FIXME{\natexlab{a}})]{ref34}
+Thomas Nuttall et~al.
+\newblock Deep clustering of context-dependent svara realisation in carnatic
+  music.
+\newblock \emph{FIXME -- verify venue, year, volume, pages},
+  FIXME{\natexlab{a}}.
+
+\bibitem[Nuttall et~al.(FIXME{\natexlab{b}})]{ref35}
+Thomas Nuttall et~al.
+\newblock Embedding-based modelling of gamaka ornamentation and svara
+  realisation in carnatic music.
+\newblock \emph{FIXME -- verify venue, year, volume, pages},
+  FIXME{\natexlab{b}}.
+
+\bibitem[Singh et~al.(FIXME{\natexlab{b}})]{ref36}
+Vishwa~Mohan Singh et~al.
+\newblock A convolutional-recurrent network with ctc objective for
+  transcription of indian classical music.
+\newblock \emph{FIXME -- verify venue, year, volume, pages},
+  FIXME{\natexlab{b}}.
+
+\bibitem[Manilow et~al.(2019)Manilow, Wichern, Seetharaman, and Le~Roux]{ref37}
+Ethan Manilow, Gordon Wichern, Prem Seetharaman, and Jonathan Le~Roux.
+\newblock Cutting music source separation some slakh: A dataset to study the
+  impact of training data quality and quantity.
+\newblock In \emph{Proceedings of the IEEE Workshop on Applications of Signal
+  Processing to Audio and Acoustics (WASPAA)}, 2019.
+
+\bibitem[Ghosh et~al.(FIXME)]{ref38}
+Sourav Ghosh et~al.
+\newblock Augmenting small audio classification datasets with a
+  preference-optimised text-to-audio diffusion model.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\bibitem[Ibaraki and Chiang(FIXME)]{ref39}
+Ryo Ibaraki and David Chiang.
+\newblock Synthetic training data for low-resource speech recognition via
+  novel-text tts pairing.
+\newblock \emph{FIXME -- verify venue, year, volume, pages}, FIXME.
+
+\end{thebibliography}

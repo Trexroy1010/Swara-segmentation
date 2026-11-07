@@ -1,0 +1,20 @@
+clip_name,cnn_attention,rfc
+test1 (2).wav,sa  ’ re  ’ sa  ’ re  ’ ni  ’ sa  ’ re  ’ dha  ’ re  ’ ga  ’ re  ’ ga,sa  ’ re  ’ sa  ’ re  ’ sa  ’ sa  ’ sa  ’ sa  ’ re  ’ ga  ’ re  ’ ga
+test2 (1).wav,sa  ’ re  ’ ni  ’ sa  ’ re  ’ ga  ’ ma,sa  ’ re  ’ ga  ’ sa  ’ re  ’ ga  ’ ma
+test3 (1).wav,re  ’ ga  ’ re  ’ ga  ’ ma  ’ dha,re  ’ ga  ’ dha  ’ ga  ’ ma  ’ pa
+test4 (1).wav,ga  ’ ma  ’ pa  ’ ga  ’ ma  ’ pa  ’ dha,ga  ’ ma  ’ pa  ’ ma  ’ ma  ’ pa  ’ dha
+test5 (1).wav,ma  ’ pa  ’ dha  ’ ma  ’ pa  ’ dha  ’ ni,ma  ’ pa  ’ dha  ’ ma  ’ pa  ’ dha  ’ ni
+test6.wav,pa  ’ dha  ’ ni  ’ pa  ’ dha  ’ ni  ’ sa,pa  ’ dha  ’ ni  ’ pa  ’ dha  ’ ni  ’ sa
+test7.wav,dha  ’ ni  ’ sa  ’ dha  ’ ni  ’ sa  ’ sa,dha  ’ ni  ’ sa  ’ dha  ’ ni  ’ sa  ’ re
+test8.wav,ni  ’ sa  ’ sa  ’ ni  ’ sa  ’ re  ’ ni,ni  ’ sa  ’ re  ’ ni  ’ sa  ’ re  ’ ni
+test9.wav,ni  ’ sa  ’ sa  ’ ni  ’ sa  ’ sa  ’ ni,ni  ’ re  ’ sa  ’ ni  ’ ni  ’ sa  ’ ni
+test10.wav,re  ’ sa  ’ sa  ’ sa  ’ sa  ’ ni  ’ dha,ni  ’ sa  ’ ni  ’ ni  ’ sa  ’ ni  ’ dha
+test11.wav,sa  ’ ni  ’ dha  ’ sa  ’ ni  ’ dha  ’ pa,sa  ’ ni  ’ dha  ’ sa  ’ ni  ’ dha  ’ pa
+test12.wav,ni  ’ dha  ’ pa  ’ ni  ’ dha  ’ pa  ’ ma,ni  ’ dha  ’ pa  ’ ni  ’ dha  ’ pa  ’ ma
+test13.wav,dha  ’ pa  ’ sa  ’ dha  ’ ma  ’ pa  ’ ma  ’ ga,dha  ’ pa  ’ ma  ’ dha  ’ ma  ’ pa  ’ ma  ’ ga
+test14.wav,pa  ’ ma  ’ ni  ’ pa  ’ ma  ’ ga  ’ sa,pa  ’ ma  ’ ma  ’ pa  ’ ma  ’ ma  ’ re
+test15.wav,ma  ’ ga  ’ sa  ’ ma  ’ ga  ’ re  ’ sa,ma  ’ ga  ’ re  ’ ma  ’ ga  ’ re  ’ sa
+test16.wav,sa  ’ re  ’ ni  ’ sa  ’ re  ’ ga  ’ ma,sa  ’ re  ’ ga  ’ sa  ’ re  ’ ga  ’ ma
+test17.wav,re  ’ ga  ’ ma  ’ re  ’ ga  ’ ma  ’ ma  ’ ma,re  ’ ga  ’ ma  ’ re  ’ ga  ’ ma  ’ ma  ’ sa
+test18.wav,ga  ’ ma  ’ pa  ’ ga  ’ ma  ’ ma  ’ ma  ’ dha,ga  ’ ma  ’ pa  ’ ga  ’ ma  ’ ma  ’ ga  ’ dha
+test19.wav,ma  ’ pa  ’ dha  ’ ma  ’ pa  ’ dha  ’ ni,ma  ’ pa  ’ dha  ’ ma  ’ pa  ’ dha  ’ ni

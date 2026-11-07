@@ -1,0 +1,20 @@
+experiment,clip_name,n_segments,cnn_sequence,rfc_sequence
+E3,test1.wav,13,pa   re   ma   sa   sa   re   pa   pa   ni   ni   ni   re   sa,sa   re   dha   sa   dha   ga   sa   sa   ni   ma   ni   re   ga
+E3,test2.wav,7,sa   ga   sa   sa   ga   ni   sa,pa   ga   sa   pa   ni   ni   ma
+E3,test3.wav,6,sa   ga   pa   ma   re   ma,pa   ni   pa   ni   ga   ma
+E3,test4.wav,6,sa   sa   sa   re   ma   sa,sa   sa   sa   re   re   dha
+E3,test5.wav,7,sa   ni   sa   sa   ma   ma   ma,sa   ga   pa   sa   ni   ga   dha
+E3,test6.wav,7,sa   ma   ma   sa   ma   ma   ma,pa   ga   sa   sa   ni   ni   pa
+E3,test7.wav,6,ma   ma   sa   ma   ni   ma,sa   sa   sa   dha   sa   pa
+E3,test8.wav,7,sa   ga   ma   sa   ma   ma   ma,sa   ma   dha   sa   sa   ga   ma
+E3,test9.wav,7,sa   ni   sa   ma   ma   ma   ma,pa   ni   sa   ga   dha   ni   ga
+E3,test10.wav,7,ga   ni   ma   sa   ni   ni   ma,dha   ni   sa   pa   ni   ni   ma
+E3,test11.wav,5,sa   ni   ma   sa   ma,pa   ma   ma   ga   ma
+E3,test12.wav,5,sa   sa   ma   ni   ma,dha   sa   ma   ma   ga
+E3,test13.wav,7,sa   ni   ma   sa   ni   ga   ma,sa   ma   pa   sa   ma   ga   ma
+E3,test14.wav,7,pa   ni   sa   sa   ma   ni   ma,sa   ni   ma   sa   ni   ma   ni
+E3,test15.wav,7,sa   ma   sa   sa   ni   ma   ma,sa   ma   pa   sa   ni   ni   sa
+E3,test16.wav,7,pa   ga   ma   sa   ga   ni   ma,sa   ma   ma   sa   ni   ni   sa
+E3,test17.wav,7,pa   re   sa   sa   ma   ni   ma,sa   ma   ma   pa   ma   ni   ma
+E3,test18.wav,6,sa   sa   sa   re   ni   ma,sa   ma   sa   dha   ni   pa
+E3,test19.wav,6,sa   sa   sa   ma   ni   ma,pa   pa   sa   ga   ga   pa

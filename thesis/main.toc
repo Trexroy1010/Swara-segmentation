@@ -1,0 +1,45 @@
+\contentsline {chapter}{Abstract}{i}{chapter*.1}%
+\contentsline {chapter}{Acknowledgments}{ii}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Motivation}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Objectives}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Automatic Music Transcription: General Approaches}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Monophonic Transcription and Low-Resource Instrument Corpora}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Acoustic Feature Representations}{7}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Neural Architectures for Onset Detection and Note Segmentation}{8}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Note and Raga Recognition in Indian Classical Music}{9}{section.2.6}%
+\contentsline {section}{\numberline {2.7}Addressing Data Scarcity through Synthetic Data Generation}{10}{section.2.7}%
+\contentsline {section}{\numberline {2.8}Summary and Research Gap}{11}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Dataset Preparation}{13}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Dataset Preparation}{13}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Methodology}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Overview}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Overall Pipeline}{20}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Data Collection}{20}{subsection.4.2.1}%
+\contentsline {paragraph}{Data Splitting.}{21}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Feature Extraction}{21}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Experiments}{24}{subsection.4.2.3}%
+\contentsline {paragraph}{Experiment I: Log-Mel Spectrogram.}{24}{subsection.4.2.3}%
+\contentsline {paragraph}{Experiment II: Pitch.}{24}{subsection.4.2.3}%
+\contentsline {paragraph}{Experiment III: RMS Energy.}{24}{subsection.4.2.3}%
+\contentsline {paragraph}{Experiment IV: Log-Mel Spectrogram + Pitch.}{24}{subsection.4.2.3}%
+\contentsline {paragraph}{Experiment V: Log-Mel Spectrogram + Pitch + RMS.}{25}{subsection.4.2.3}%
+\contentsline {paragraph}{Experiment VI: Constant-Q Transform (CQT).}{25}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Models}{25}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Training Configurations}{30}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Evaluation Metrics}{31}{subsection.4.2.6}%
+\contentsline {paragraph}{Evaluation Protocol.}{31}{equation.4.4}%
+\contentsline {chapter}{\numberline {5}Result and Discussion}{32}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Experiment 1: Log-Mel}{32}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Experiment 2: Pitch}{34}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Experiment 3: RMS}{36}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Experiment 4: Log-Mel + Pitch}{38}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Experiment 5: Log-Mel + Pitch + RMS}{40}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Experiment 6: Constant-Q Transform (CQT)}{42}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Overall Performance Comparison}{44}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Discussion}{44}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Limitations}{46}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Future Work}{47}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusion}{49}{chapter.8}%

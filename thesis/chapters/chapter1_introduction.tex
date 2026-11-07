@@ -1,0 +1,42 @@
+\chapter{Introduction}
+\label{ch:introduction}
+
+Musical Information Retrieval (MIR) has become an increasingly important research area due to the rapid growth of digital music platforms, machine learning, and artificial intelligence. Modern MIR systems enable computers to analyze, understand, and process musical content automatically, making them valuable in numerous applications, including automatic music transcription, music recommendation, source separation, instrument recognition, music retrieval, and audio tagging. As the demand for intelligent music analysis continues to increase, developing reliable methods for understanding musical performances has become a significant research challenge.
+
+Musical instruments can generally be categorized as either monophonic or polyphonic based on the number of notes they can produce simultaneously. Polyphonic instruments, such as the piano, guitar, and harp, are capable of producing multiple notes at the same time, whereas monophonic instruments, including the flute, trumpet, clarinet, and saxophone, produce only a single note at any given moment. Although monophonic instruments eliminate the complexity of overlapping notes, accurately identifying note boundaries and classifying individual notes from continuous performances remains a challenging task due to variations in note duration, articulation, performer technique, and recording conditions.
+
+Among the various research problems in MIR, Automatic Music Transcription (AMT) has received considerable attention. The objective of AMT is to convert an audio performance into a symbolic representation, such as musical notes or notation, without manual intervention. While substantial progress has been achieved for widely used Western instruments, particularly the piano, comparatively fewer studies have focused on Indian classical instruments. Consequently, publicly available datasets, benchmark models, and standardized evaluation methodologies for Indian classical music remain limited. This lack of resources presents a significant challenge for researchers working on automatic transcription of Indian classical instruments.
+
+One of the primary obstacles in developing machine learning models for musical analysis is the availability of annotated data. Deep learning models typically benefit from large, carefully labeled datasets, which are both time-consuming and expensive to create. In the context of Indian classical music, the challenge is even greater because expert knowledge is often required to accurately annotate individual swaras and note boundaries. Furthermore, high-quality recordings of isolated notes and continuous performances are relatively scarce compared to those available for more widely studied instruments. As a result, collecting sufficiently large datasets for supervised learning becomes a major limitation.
+
+To address these challenges, this research investigates whether accurate automatic swara transcription can be achieved using a relatively small amount of training data. A dataset consisting of 748 individual flute note recordings was collected through self-recordings and publicly available audio sources. Using these recordings, a synthetic melody dataset containing 1,000 continuous flute melodies was generated to simulate realistic musical performances while providing accurate ground-truth annotations for segmentation and classification.
+
+The proposed framework consists of two sequential stages: note segmentation and swara classification. First, a recurrent convolutional neural network (RCNN) with an attention mechanism is employed to detect note boundaries in continuous flute melodies. The segmented notes are subsequently classified using a convolutional neural network (CNN) with an attention mechanism. Throughout this research, several acoustic feature representations, including Mel-Frequency Cepstral Coefficients (MFCC), Log-Mel Spectrograms, pitch, RMS energy, and the Constant-Q Transform (CQT), were investigated to determine the most effective representation for the proposed system.
+
+Experimental results demonstrate that CQT-based feature extraction consistently outperformed the alternative representations evaluated in this study. The proposed segmentation model achieved a segmentation accuracy of 92.86\%, while the classification model achieved a swara classification accuracy of 97.80\% on correctly segmented melodies. These findings indicate that accurate end-to-end swara transcription can be achieved using a relatively small dataset when combined with appropriate feature engineering, synthetic data generation, careful model optimization, and hyperparameter tuning.
+
+The primary contribution of this research is the development of an end-to-end pipeline for automatic segmentation and swara classification of continuous Indian classical flute melodies. Unlike many existing approaches that rely on large annotated datasets, the proposed framework demonstrates that competitive performance can be achieved with limited training data by combining synthetic data generation with suitable feature representations and attention-based deep learning models. The proposed methodology also provides a practical foundation for extending automatic music transcription techniques to other monophonic musical instruments that suffer from limited annotated data.
+
+\section{Motivation}
+\label{sec:motivation}
+
+Automatic Music Transcription (AMT) has attracted significant attention in recent years due to its wide range of applications in music education, digital archiving, music retrieval, and intelligent music analysis. However, most existing research has primarily focused on Western musical instruments, particularly the piano, because of the availability of large-scale annotated datasets and established benchmark models. In contrast, Indian classical instruments, especially the flute, remain relatively underexplored despite their cultural significance and widespread use.
+
+One of the major barriers to research in this area is the scarcity of high-quality labeled datasets. Creating annotated musical data requires considerable time, expert knowledge, and manual effort to accurately identify note boundaries and swaras. Consequently, developing deep learning models for Indian classical music becomes difficult, as conventional approaches often rely on thousands of labeled recordings for effective training.
+
+This research was motivated by the need to develop an efficient and practical automatic swara transcription system that can achieve high performance without requiring massive annotated datasets. Instead of depending solely on large collections of real recordings, this work investigates whether synthetic melody generation, combined with appropriate feature extraction techniques and attention-based deep learning models, can provide a reliable alternative. Furthermore, this study aims to contribute to the relatively limited body of research on Indian classical flute analysis and provide a foundation for future work on other monophonic musical instruments.
+
+\section{Objectives}
+\label{sec:objectives}
+
+The primary objective of this research is to develop an end-to-end deep learning framework capable of automatically segmenting and classifying swaras from continuous Indian classical flute melodies. To accomplish this objective, the following goals were established:
+
+\begin{itemize}
+    \item To collect and prepare a dataset of isolated Indian classical flute notes.
+    \item To generate a synthetic melody dataset that accurately represents continuous flute performances while providing precise ground-truth annotations.
+    \item To develop an automatic note segmentation model capable of identifying note boundaries in continuous audio recordings.
+    \item To investigate and compare multiple acoustic feature representations, including MFCC, Log-Mel Spectrogram, pitch, RMS energy, and Constant-Q Transform (CQT), for note segmentation and swara classification.
+    \item To design and evaluate attention-based deep learning models for both segmentation and classification tasks.
+    \item To analyze the effectiveness of the proposed framework using quantitative performance metrics and transcription results.
+    \item To investigate whether accurate swara transcription can be achieved using a relatively small amount of training data through careful feature engineering, synthetic data generation, and model optimization.
+\end{itemize}

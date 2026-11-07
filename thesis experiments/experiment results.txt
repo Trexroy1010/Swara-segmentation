@@ -1,0 +1,2176 @@
+E1:
+Seg model parameters: 1090594
+Segmentation training:   4%|▍         | 1/25 [06:36<2:38:33, 396.38s/it]  Epoch 01/25  train_loss=0.3810  val_loss=0.1590  val_f1=0.742  prec=0.597  rec=0.981
+Segmentation training:  20%|██        | 5/25 [09:07<22:57, 68.89s/it]  Epoch 05/25  train_loss=0.0648  val_loss=0.1012  val_f1=0.879  prec=0.798  rec=0.978
+Segmentation training:  40%|████      | 10/25 [12:16<10:38, 42.55s/it]  Epoch 10/25  train_loss=0.0403  val_loss=0.1010  val_f1=0.888  prec=0.815  rec=0.976
+Segmentation training:  60%|██████    | 15/25 [15:25<06:24, 38.46s/it]  Epoch 15/25  train_loss=0.0111  val_loss=0.1562  val_f1=0.918  prec=0.879  rec=0.961
+Segmentation training:  80%|████████  | 20/25 [18:33<03:09, 37.80s/it]  Epoch 20/25  train_loss=0.0045  val_loss=0.1893  val_f1=0.944  prec=0.927  rec=0.962
+Segmentation training: 100%|██████████| 25/25 [21:44<00:00, 52.19s/it]
+  Epoch 25/25  train_loss=0.0006  val_loss=0.2264  val_f1=0.949  prec=0.943  rec=0.956
+
+Saved → /content/E1_seg_crnn.pth
+
+Best val F1        : 0.950
+Best val Precision : 0.943
+Best val Recall    : 0.989
+
+
+
+
+E2:
+Seg model parameters: 1090594
+Segmentation training:   4%|▍         | 1/25 [06:55<2:46:13, 415.56s/it]  Epoch 01/25  train_loss=0.6990  val_loss=0.5649  val_f1=0.399  prec=0.254  rec=0.924
+Segmentation training:  20%|██        | 5/25 [12:33<37:41, 113.10s/it]  Epoch 05/25  train_loss=0.4232  val_loss=0.4698  val_f1=0.480  prec=0.323  rec=0.934
+Segmentation training:  40%|████      | 10/25 [19:40<22:16, 89.13s/it]  Epoch 10/25  train_loss=0.3458  val_loss=0.5489  val_f1=0.536  prec=0.384  rec=0.885
+Segmentation training:  60%|██████    | 15/25 [26:45<14:17, 85.74s/it]  Epoch 15/25  train_loss=0.2511  val_loss=0.8240  val_f1=0.570  prec=0.435  rec=0.827
+Segmentation training:  80%|████████  | 20/25 [33:50<07:07, 85.45s/it]  Epoch 20/25  train_loss=0.1753  val_loss=1.3455  val_f1=0.577  prec=0.462  rec=0.769
+Segmentation training: 100%|██████████| 25/25 [41:12<00:00, 98.89s/it]
+  Epoch 25/25  train_loss=0.1415  val_loss=1.7085  val_f1=0.574  prec=0.470  rec=0.738
+
+Saved → /content/E2_seg_crnn.pth
+
+Best val F1        : 0.577
+Best val Precision : 0.470
+Best val Recall    : 0.934
+
+
+
+Upload one or more test flute .wav files:
+No file chosen Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable.
+Saving test1.wav to test1.wav
+Saving test2.wav to test2.wav
+Saving test3.wav to test3.wav
+Saving test4.wav to test4.wav
+Saving test5.wav to test5.wav
+Saving test6.wav to test6.wav
+Saving test7.wav to test7.wav
+Saving test8.wav to test8.wav
+Saving test9.wav to test9.wav
+Saving test10.wav to test10.wav
+Saving test11.wav to test11.wav
+Saving test12.wav to test12.wav
+Saving test13.wav to test13.wav
+Saving test14.wav to test14.wav
+Saving test15.wav to test15.wav
+Saving test16.wav to test16.wav
+Saving test17.wav to test17.wav
+Saving test18.wav to test18.wav
+Saving test19.wav to test19.wav
+Processing files:   0%|          | 0/19 [00:00<?, ?it/s]
+============================================================
+Processing: test1.wav
+============================================================
+Boundaries detected: 10
+  [Edge] Dropping short segment [8.893–9.056]s
+  [Edge] Dropping short segment [10.937–11.099]s
+Classifying 9 segments...
+
+Classifying segments:   0%|          | 0/9 [00:00<?, ?it/s]
+Classifying segments:  11%|█         | 1/9 [00:00<00:00,  9.27it/s]
+Classifying segments:  33%|███▎      | 3/9 [00:00<00:00, 12.01it/s]  Seg 01  [0.000s – 1.138s]  CNN=sa  RFC=sa
+  Seg 02  [1.138s – 2.067s]  CNN=ma  RFC=re
+  Seg 03  [2.067s – 3.065s]  CNN=sa  RFC=sa
+
+Classifying segments:  56%|█████▌    | 5/9 [00:00<00:00, 12.14it/s]  Seg 04  [3.065s – 4.992s]  CNN=sa  RFC=sa
+  Seg 05  [4.992s – 5.805s]  CNN=ma  RFC=re
+  Seg 06  [5.805s – 8.893s]  CNN=ma  RFC=sa
+
+Classifying segments:  78%|███████▊  | 7/9 [00:00<00:00, 12.47it/s]
+Classifying segments: 100%|██████████| 9/9 [00:00<00:00, 12.23it/s]  Seg 07  [9.056s – 9.938s]  CNN=ga  RFC=ga
+  Seg 08  [9.938s – 10.937s]  CNN=re  RFC=re
+  Seg 09  [11.099s – 11.891s]  CNN=sa  RFC=ga
+
+CNN+Attention : sa → ma → sa → sa → ma → ma → ga → re → sa
+RFC           : sa → re → sa → sa → re → sa → ga → re → ga
+
+
+Processing files:   5%|▌         | 1/19 [00:02<00:45,  2.53s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test2.wav
+============================================================
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 13.75it/s]  Seg 01  [0.000s – 0.441s]  CNN=sa  RFC=sa
+  Seg 02  [0.441s – 0.882s]  CNN=ma  RFC=re
+  Seg 03  [0.882s – 1.416s]  CNN=sa  RFC=re
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 12.65it/s]  Seg 04  [1.416s – 1.881s]  CNN=sa  RFC=sa
+  Seg 05  [1.881s – 2.322s]  CNN=ma  RFC=re
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 12.21it/s]  Seg 06  [2.322s – 3.367s]  CNN=ga  RFC=ga
+
+CNN+Attention : sa → ma → sa → sa → ma → ga
+RFC           : sa → re → re → sa → re → ga
+
+
+Processing files:  11%|█         | 2/19 [00:04<00:36,  2.17s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test3.wav
+============================================================
+  [Edge] Dropping last boundary at 3.228s
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  40%|████      | 2/5 [00:00<00:00, 13.72it/s]  Seg 01  [0.000s – 0.395s]  CNN=ma  RFC=re
+  Seg 02  [0.395s – 1.277s]  CNN=ga  RFC=ga
+  Seg 03  [1.277s – 1.904s]  CNN=pa  RFC=re
+
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00, 13.19it/s]  Seg 04  [1.904s – 2.345s]  CNN=ga  RFC=ga
+  Seg 05  [2.345s – 3.386s]  CNN=ga  RFC=re
+
+CNN+Attention : ma → ga → pa → ga → ga
+RFC           : re → ga → re → ga → re
+
+
+Processing files:  16%|█▌        | 3/19 [00:06<00:31,  1.99s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test4.wav
+============================================================
+  [Edge] Dropping last boundary at 3.297s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 16.14it/s]  Seg 01  [0.000s – 0.464s]  CNN=ga  RFC=ga
+  Seg 02  [0.464s – 0.998s]  CNN=ga  RFC=ma
+  Seg 03  [0.998s – 1.440s]  CNN=ga  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.02it/s]  Seg 04  [1.440s – 1.927s]  CNN=ga  RFC=ga
+  Seg 05  [1.927s – 2.531s]  CNN=dha  RFC=ma
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 13.46it/s]  Seg 06  [2.531s – 2.856s]  CNN=ga  RFC=ga
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 13.69it/s]  Seg 07  [2.856s – 3.437s]  CNN=ma  RFC=ma
+
+CNN+Attention : ga → ga → ga → ga → dha → ga → ma
+RFC           : ga → ma → ga → ga → ma → ga → ma
+
+
+Processing files:  21%|██        | 4/19 [00:08<00:29,  1.96s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test5.wav
+============================================================
+  [Edge] Dropping last boundary at 3.251s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 12.58it/s]  Seg 01  [0.000s – 0.557s]  CNN=ma  RFC=ma
+  Seg 02  [0.557s – 0.906s]  CNN=ga  RFC=ga
+  Seg 03  [0.906s – 1.533s]  CNN=dha  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 12.62it/s]  Seg 04  [1.533s – 2.020s]  CNN=ma  RFC=ma
+  Seg 05  [2.020s – 2.392s]  CNN=ga  RFC=pa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 13.13it/s]  Seg 06  [2.392s – 2.972s]  CNN=dha  RFC=dha
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 13.04it/s]  Seg 07  [2.972s – 3.428s]  CNN=dha  RFC=ni
+
+CNN+Attention : ma → ga → dha → ma → ga → dha → dha
+RFC           : ma → ga → ma → ma → pa → dha → ni
+
+
+Processing files:  26%|██▋       | 5/19 [00:10<00:27,  1.96s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test6.wav
+============================================================
+  [Edge] Dropping last boundary at 3.228s
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 14.71it/s]  Seg 01  [0.000s – 0.441s]  CNN=pa  RFC=pa
+  Seg 02  [0.441s – 1.463s]  CNN=dha  RFC=ni
+  Seg 03  [1.463s – 1.927s]  CNN=pa  RFC=pa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 13.03it/s]  Seg 04  [1.927s – 2.392s]  CNN=sa  RFC=dha
+  Seg 05  [2.392s – 2.879s]  CNN=ni  RFC=ni
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 13.05it/s]  Seg 06  [2.879s – 3.456s]  CNN=sa  RFC=sa
+
+CNN+Attention : pa → dha → pa → sa → ni → sa
+RFC           : pa → ni → pa → dha → ni → sa
+
+
+Processing files:  32%|███▏      | 6/19 [00:12<00:26,  2.06s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test7.wav
+============================================================
+  [Edge] Dropping last boundary at 3.297s
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.836–0.998]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.441s]  CNN=dha  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 11.15it/s]  Seg 02  [0.441s – 0.836s]  CNN=dha  RFC=ni
+  Seg 03  [0.998s – 1.463s]  CNN=sa  RFC=sa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  8.54it/s]  Seg 04  [1.463s – 1.881s]  CNN=dha  RFC=sa
+  Seg 05  [1.881s – 2.392s]  CNN=dha  RFC=ni
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 10.58it/s]  Seg 06  [2.392s – 2.972s]  CNN=sa  RFC=sa
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  9.86it/s]  Seg 07  [2.972s – 3.400s]  CNN=dha  RFC=re
+
+CNN+Attention : dha → dha → sa → dha → dha → sa → dha
+RFC           : sa → ni → sa → sa → ni → sa → re
+
+
+Processing files:  37%|███▋      | 7/19 [00:15<00:27,  2.32s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test8.wav
+============================================================
+  [Edge] Dropping last boundary at 3.274s
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  20%|██        | 1/5 [00:00<00:00,  7.68it/s]  Seg 01  [0.000s – 0.952s]  CNN=dha  RFC=ni
+
+Classifying segments:  40%|████      | 2/5 [00:00<00:00,  7.96it/s]  Seg 02  [0.952s – 1.440s]  CNN=ma  RFC=re
+
+Classifying segments:  60%|██████    | 3/5 [00:00<00:00,  8.32it/s]  Seg 03  [1.440s – 1.927s]  CNN=ma  RFC=ni
+
+Classifying segments:  80%|████████  | 4/5 [00:00<00:00,  8.21it/s]  Seg 04  [1.927s – 2.392s]  CNN=sa  RFC=sa
+
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00,  8.31it/s]  Seg 05  [2.392s – 3.428s]  CNN=dha  RFC=dha
+
+CNN+Attention : dha → ma → ma → sa → dha
+RFC           : ni → re → ni → sa → dha
+
+
+Processing files:  42%|████▏     | 8/19 [00:17<00:25,  2.30s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test9.wav
+============================================================
+  [Edge] Dropping last boundary at 3.297s
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 15.61it/s]  Seg 01  [0.000s – 0.580s]  CNN=sa  RFC=dha
+  Seg 02  [0.580s – 1.022s]  CNN=dha  RFC=ni
+  Seg 03  [1.022s – 1.486s]  CNN=sa  RFC=sa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 13.55it/s]  Seg 04  [1.486s – 1.974s]  CNN=sa  RFC=sa
+  Seg 05  [1.974s – 2.438s]  CNN=ni  RFC=ni
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 13.62it/s]  Seg 06  [2.438s – 3.386s]  CNN=sa  RFC=ni
+
+CNN+Attention : sa → dha → sa → sa → ni → sa
+RFC           : dha → ni → sa → sa → ni → ni
+
+
+Processing files:  47%|████▋     | 9/19 [00:19<00:22,  2.28s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test10.wav
+============================================================
+  [Edge] Dropping last boundary at 3.367s
+Boundaries detected: 7
+  [Edge] Dropping short segment [2.461–2.624]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 15.21it/s]  Seg 01  [0.000s – 0.580s]  CNN=dha  RFC=sa
+  Seg 02  [0.580s – 1.045s]  CNN=sa  RFC=sa
+  Seg 03  [1.045s – 1.509s]  CNN=ni  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.60it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.24it/s]  Seg 04  [1.509s – 2.020s]  CNN=dha  RFC=re
+  Seg 05  [2.020s – 2.461s]  CNN=sa  RFC=sa
+  Seg 06  [2.624s – 2.972s]  CNN=ni  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.16it/s]  Seg 07  [2.972s – 3.489s]  CNN=dha  RFC=dha
+
+CNN+Attention : dha → sa → ni → dha → sa → ni → dha
+RFC           : sa → sa → ni → re → sa → ni → dha
+
+
+Processing files:  53%|█████▎    | 10/19 [00:21<00:19,  2.18s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test11.wav
+============================================================
+Boundaries detected: 8
+  [Edge] Dropping short segment [0.511–0.673]s
+  [Edge] Dropping short segment [1.393–1.556]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 16.25it/s]  Seg 01  [0.000s – 0.511s]  CNN=sa  RFC=sa
+  Seg 02  [0.673s – 0.952s]  CNN=ni  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 16.17it/s]  Seg 03  [0.952s – 1.393s]  CNN=dha  RFC=dha
+  Seg 04  [1.556s – 1.974s]  CNN=sa  RFC=sa
+
+  Seg 05  [1.974s – 2.392s]  CNN=ni  RFC=sa
+  Seg 06  [2.392s – 2.856s]  CNN=pa  RFC=pa
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.21it/s]  Seg 07  [2.856s – 3.404s]  CNN=sa  RFC=pa
+
+CNN+Attention : sa → ni → dha → sa → ni → pa → sa
+RFC           : sa → ni → dha → sa → sa → pa → pa
+
+
+Processing files:  58%|█████▊    | 11/19 [00:23<00:16,  2.11s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test12.wav
+============================================================
+  [Edge] Dropping last boundary at 3.344s
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  40%|████      | 2/5 [00:00<00:00, 14.23it/s]  Seg 01  [0.000s – 1.463s]  CNN=dha  RFC=pa
+  Seg 02  [1.463s – 1.858s]  CNN=dha  RFC=ni
+
+Classifying segments:  80%|████████  | 4/5 [00:00<00:00, 15.23it/s]  Seg 03  [1.858s – 2.461s]  CNN=pa  RFC=pa
+  Seg 04  [2.461s – 2.879s]  CNN=pa  RFC=pa
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00, 15.18it/s]
+  Seg 05  [2.879s – 3.348s]  CNN=ma  RFC=re
+
+CNN+Attention : dha → dha → pa → pa → ma
+RFC           : pa → ni → pa → pa → re
+
+Processing files:  63%|██████▎   | 12/19 [00:25<00:14,  2.09s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test13.wav
+============================================================
+  [Edge] Dropping last boundary at 3.367s
+Boundaries detected: 3
+Classifying 4 segments...
+
+Classifying segments:   0%|          | 0/4 [00:00<?, ?it/s]
+Classifying segments:  50%|█████     | 2/4 [00:00<00:00, 13.66it/s]  Seg 01  [0.000s – 0.952s]  CNN=re  RFC=ga
+  Seg 02  [0.952s – 1.509s]  CNN=re  RFC=re
+  Seg 03  [1.509s – 2.461s]  CNN=sa  RFC=pa
+
+Classifying segments: 100%|██████████| 4/4 [00:00<00:00, 13.02it/s]
+  Seg 04  [2.461s – 3.414s]  CNN=pa  RFC=re
+
+CNN+Attention : re → re → sa → pa
+RFC           : ga → re → pa → re
+
+Processing files:  68%|██████▊   | 13/19 [00:28<00:13,  2.25s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test14.wav
+============================================================
+  [Edge] Dropping last boundary at 3.320s
+Boundaries detected: 6
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]  Seg 01  [0.116s – 0.488s]  CNN=pa  RFC=pa
+
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 11.58it/s]  Seg 02  [0.488s – 0.975s]  CNN=ma  RFC=re
+  Seg 03  [0.975s – 1.556s]  CNN=ga  RFC=ga
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00,  9.64it/s]  Seg 04  [1.556s – 1.974s]  CNN=ga  RFC=pa
+
+Classifying segments:  83%|████████▎ | 5/6 [00:00<00:00,  9.19it/s]  Seg 05  [1.974s – 2.972s]  CNN=ma  RFC=re
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00,  9.04it/s]  Seg 06  [2.972s – 3.423s]  CNN=re  RFC=re
+
+CNN+Attention : pa → ma → ga → ga → ma → re
+RFC           : pa → re → ga → pa → re → re
+
+
+Processing files:  74%|███████▎  | 14/19 [00:31<00:12,  2.46s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test15.wav
+============================================================
+  [Edge] Dropping last boundary at 3.390s
+Boundaries detected: 7
+  [Edge] Dropping short segment [1.881–2.043]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 12.27it/s]  Seg 01  [0.000s – 0.534s]  CNN=ma  RFC=ma
+  Seg 02  [0.534s – 0.929s]  CNN=ga  RFC=ga
+  Seg 03  [0.929s – 1.440s]  CNN=re  RFC=re
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 10.56it/s]  Seg 04  [1.440s – 1.881s]  CNN=ma  RFC=ma
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 10.49it/s]  Seg 05  [2.043s – 2.461s]  CNN=ga  RFC=ga
+  Seg 06  [2.461s – 2.926s]  CNN=re  RFC=re
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 10.38it/s]  Seg 07  [2.926s – 3.414s]  CNN=sa  RFC=sa
+
+
+CNN+Attention : ma → ga → re → ma → ga → re → sa
+RFC           : ma → ga → re → ma → ga → re → sa
+
+Processing files:  79%|███████▉  | 15/19 [00:33<00:09,  2.46s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test16.wav
+============================================================
+  [Edge] Dropping last boundary at 3.297s
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  40%|████      | 2/5 [00:00<00:00, 14.41it/s]  Seg 01  [0.000s – 0.464s]  CNN=sa  RFC=sa
+  Seg 02  [0.464s – 0.952s]  CNN=sa  RFC=re
+  Seg 03  [0.952s – 1.950s]  CNN=sa  RFC=sa
+
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00, 13.56it/s]  Seg 04  [1.950s – 2.368s]  CNN=ma  RFC=re
+  Seg 05  [2.368s – 3.386s]  CNN=dha  RFC=ga
+
+CNN+Attention : sa → sa → sa → ma → dha
+RFC           : sa → re → sa → re → ga
+
+
+Processing files:  84%|████████▍ | 16/19 [00:35<00:06,  2.32s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test17.wav
+============================================================
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 13.63it/s]  Seg 01  [0.000s – 0.464s]  CNN=ma  RFC=re
+  Seg 02  [0.464s – 0.952s]  CNN=ga  RFC=ga
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 14.80it/s]  Seg 03  [0.952s – 1.556s]  CNN=dha  RFC=ma
+  Seg 04  [1.556s – 1.927s]  CNN=re  RFC=re
+  Seg 05  [1.927s – 2.461s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 13.78it/s]
+  Seg 06  [2.461s – 3.475s]  CNN=dha  RFC=ma
+
+CNN+Attention : ma → ga → dha → re → ga → dha
+RFC           : re → ga → ma → re → ga → ma
+
+Processing files:  89%|████████▉ | 17/19 [00:38<00:04,  2.35s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test18.wav
+============================================================
+  [Edge] Dropping last boundary at 3.344s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 12.38it/s]  Seg 01  [0.000s – 0.511s]  CNN=ga  RFC=ga
+  Seg 02  [0.511s – 1.022s]  CNN=dha  RFC=ma
+  Seg 03  [1.022s – 1.440s]  CNN=ga  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.03it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 14.49it/s]  Seg 04  [1.440s – 1.997s]  CNN=ga  RFC=ga
+  Seg 05  [1.997s – 2.577s]  CNN=dha  RFC=ma
+  Seg 06  [2.577s – 2.949s]  CNN=ga  RFC=ga
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 14.36it/s]  Seg 07  [2.949s – 3.470s]  CNN=ma  RFC=ma
+
+CNN+Attention : ga → dha → ga → ga → dha → ga → ma
+RFC           : ga → ma → ga → ga → ma → ga → ma
+
+
+Processing files:  95%|█████████▍| 18/19 [00:40<00:02,  2.30s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+Processing: test19.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 13.68it/s]  Seg 01  [0.000s – 0.511s]  CNN=ma  RFC=ma
+  Seg 02  [0.511s – 0.906s]  CNN=ga  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.81it/s]  Seg 03  [0.906s – 1.509s]  CNN=dha  RFC=ma
+  Seg 04  [1.509s – 1.974s]  CNN=ma  RFC=ma
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 14.98it/s]  Seg 05  [1.974s – 2.345s]  CNN=ga  RFC=ga
+  Seg 06  [2.345s – 2.856s]  CNN=dha  RFC=ma
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 14.84it/s]
+  Seg 07  [2.856s – 3.357s]  CNN=dha  RFC=ni
+
+CNN+Attention : ma → ga → dha → ma → ga → dha → dha
+RFC           : ma → ga → ma → ma → ga → ma → ni
+
+Processing files: 100%|██████████| 19/19 [00:42<00:00,  2.24s/it]Saved visualization → /content/E2_pipeline_output.png
+
+============================================================
+experiment  clip_name  n_segments                               cnn_sequence                               rfc_sequence
+        E2  test1.wav           9 sa → ma → sa → sa → ma → ma → ga → re → sa sa → re → sa → sa → re → sa → ga → re → ga
+        E2  test2.wav           6                sa → ma → sa → sa → ma → ga                sa → re → re → sa → re → ga
+        E2  test3.wav           5                     ma → ga → pa → ga → ga                     re → ga → re → ga → re
+        E2  test4.wav           7          ga → ga → ga → ga → dha → ga → ma           ga → ma → ga → ga → ma → ga → ma
+        E2  test5.wav           7        ma → ga → dha → ma → ga → dha → dha          ma → ga → ma → ma → pa → dha → ni
+        E2  test6.wav           6               pa → dha → pa → sa → ni → sa               pa → ni → pa → dha → ni → sa
+        E2  test7.wav           7      dha → dha → sa → dha → dha → sa → dha           sa → ni → sa → sa → ni → sa → re
+        E2  test8.wav           5                   dha → ma → ma → sa → dha                    ni → re → ni → sa → dha
+        E2  test9.wav           6               sa → dha → sa → sa → ni → sa               dha → ni → sa → sa → ni → ni
+        E2 test10.wav           7        dha → sa → ni → dha → sa → ni → dha          sa → sa → ni → re → sa → ni → dha
+        E2 test11.wav           7          sa → ni → dha → sa → ni → pa → sa          sa → ni → dha → sa → sa → pa → pa
+        E2 test12.wav           5                   dha → dha → pa → pa → ma                     pa → ni → pa → pa → re
+        E2 test13.wav           4                          re → re → sa → pa                          ga → re → pa → re
+        E2 test14.wav           6                pa → ma → ga → ga → ma → re                pa → re → ga → pa → re → re
+        E2 test15.wav           7           ma → ga → re → ma → ga → re → sa           ma → ga → re → ma → ga → re → sa
+        E2 test16.wav           5                    sa → sa → sa → ma → dha                     sa → re → sa → re → ga
+        E2 test17.wav           6              ma → ga → dha → re → ga → dha                re → ga → ma → re → ga → ma
+        E2 test18.wav           7         ga → dha → ga → ga → dha → ga → ma           ga → ma → ga → ga → ma → ga → ma
+        E2 test19.wav           7        ma → ga → dha → ma → ga → dha → dha           ma → ga → ma → ma → ga → ma → ni
+
+Saved → /content/E2_results.csv
+
+
+
+
+
+E3:
+Seg model parameters: 1090594
+Segmentation training:   4%|▍         | 1/25 [06:00<2:24:02, 360.10s/it]  Epoch 01/25  train_loss=0.5803  val_loss=0.4617  val_f1=0.509  prec=0.355  rec=0.900
+Segmentation training:  20%|██        | 5/25 [06:58<14:51, 44.58s/it]  Epoch 05/25  train_loss=0.3431  val_loss=0.4093  val_f1=0.554  prec=0.395  rec=0.926
+Segmentation training:  40%|████      | 10/25 [08:11<04:43, 18.90s/it]  Epoch 10/25  train_loss=0.2265  val_loss=0.2724  val_f1=0.657  prec=0.500  rec=0.957
+Segmentation training:  60%|██████    | 15/25 [09:24<02:31, 15.17s/it]  Epoch 15/25  train_loss=0.1869  val_loss=0.2607  val_f1=0.703  prec=0.559  rec=0.947
+Segmentation training:  80%|████████  | 20/25 [10:38<01:14, 14.92s/it]  Epoch 20/25  train_loss=0.1547  val_loss=0.2566  val_f1=0.716  prec=0.575  rec=0.951
+Segmentation training: 100%|██████████| 25/25 [11:52<00:00, 28.48s/it]
+  Epoch 25/25  train_loss=0.1102  val_loss=0.2961  val_f1=0.745  prec=0.616  rec=0.943
+
+Saved → /content/E3_seg_crnn.pth
+
+Best val F1        : 0.748
+Best val Precision : 0.619
+Best val Recall    : 0.972
+
+
+
+Upload one or more test flute .wav files:
+No file chosen Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable.
+Saving test1.wav to test1.wav
+Saving test2.wav to test2.wav
+Saving test3.wav to test3.wav
+Saving test4.wav to test4.wav
+Saving test5.wav to test5.wav
+Saving test6.wav to test6.wav
+Saving test7.wav to test7.wav
+Saving test8.wav to test8.wav
+Saving test9.wav to test9.wav
+Saving test10.wav to test10.wav
+Saving test11.wav to test11.wav
+Saving test12.wav to test12.wav
+Saving test13.wav to test13.wav
+Saving test14.wav to test14.wav
+Saving test15.wav to test15.wav
+Saving test16.wav to test16.wav
+Saving test17.wav to test17.wav
+Saving test18.wav to test18.wav
+Saving test19.wav to test19.wav
+Processing files:   0%|          | 0/19 [00:00<?, ?it/s]
+============================================================
+Processing: test1.wav
+============================================================
+Boundaries detected: 13
+  [Edge] Dropping short segment [2.090–2.252]s
+Classifying 13 segments...
+
+Classifying segments:   0%|          | 0/13 [00:00<?, ?it/s]
+  Seg 01  [0.000s – 1.161s]  CNN=pa  RFC=sa
+Classifying segments:   8%|▊         | 1/13 [00:00<00:01,  8.30it/s]
+Classifying segments:  23%|██▎       | 3/13 [00:00<00:00, 10.89it/s]  Seg 02  [1.161s – 2.090s]  CNN=re  RFC=re
+  Seg 03  [2.252s – 3.111s]  CNN=ma  RFC=dha
+  Seg 04  [3.111s – 4.017s]  CNN=sa  RFC=sa
+
+Classifying segments:  38%|███▊      | 5/13 [00:00<00:00, 11.93it/s]  Seg 05  [4.017s – 4.992s]  CNN=sa  RFC=dha
+  Seg 06  [4.992s – 5.921s]  CNN=re  RFC=ga
+
+Classifying segments:  54%|█████▍    | 7/13 [00:00<00:00, 12.38it/s]  Seg 07  [5.921s – 7.848s]  CNN=pa  RFC=sa
+
+Classifying segments:  69%|██████▉   | 9/13 [00:00<00:00, 12.45it/s]  Seg 08  [7.848s – 8.940s]  CNN=pa  RFC=sa
+  Seg 09  [8.940s – 9.427s]  CNN=ni  RFC=ni
+  Seg 10  [9.427s – 9.915s]  CNN=ni  RFC=ma
+
+Classifying segments:  85%|████████▍ | 11/13 [00:00<00:00, 12.45it/s]  Seg 11  [9.915s – 10.588s]  CNN=ni  RFC=ni
+  Seg 12  [10.588s – 11.564s]  CNN=re  RFC=re
+
+Classifying segments: 100%|██████████| 13/13 [00:01<00:00, 12.37it/s]  Seg 13  [11.564s – 11.891s]  CNN=sa  RFC=ga
+
+CNN+Attention : pa → re → ma → sa → sa → re → pa → pa → ni → ni → ni → re → sa
+RFC           : sa → re → dha → sa → dha → ga → sa → sa → ni → ma → ni → re → ga
+
+
+Processing files:   5%|▌         | 1/19 [00:02<00:48,  2.68s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test2.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 14.46it/s]  Seg 01  [0.000s – 0.441s]  CNN=sa  RFC=pa
+  Seg 02  [0.441s – 0.813s]  CNN=ga  RFC=ga
+  Seg 03  [0.813s – 1.416s]  CNN=sa  RFC=sa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 12.96it/s]  Seg 04  [1.416s – 1.881s]  CNN=sa  RFC=pa
+  Seg 05  [1.881s – 2.345s]  CNN=ga  RFC=ni
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 13.10it/s]  Seg 06  [2.345s – 2.879s]  CNN=ni  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 13.03it/s]  Seg 07  [2.879s – 3.367s]  CNN=sa  RFC=ma
+
+CNN+Attention : sa → ga → sa → sa → ga → ni → sa
+RFC           : pa → ga → sa → pa → ni → ni → ma
+
+
+Processing files:  11%|█         | 2/19 [00:04<00:38,  2.26s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test3.wav
+============================================================
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 15.76it/s]  Seg 01  [0.000s – 0.441s]  CNN=sa  RFC=pa
+  Seg 02  [0.441s – 0.906s]  CNN=ga  RFC=ni
+  Seg 03  [0.906s – 1.904s]  CNN=pa  RFC=pa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 14.14it/s]  Seg 04  [1.904s – 2.368s]  CNN=ma  RFC=ni
+  Seg 05  [2.368s – 2.856s]  CNN=re  RFC=ga
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 13.84it/s]  Seg 06  [2.856s – 3.386s]  CNN=ma  RFC=ma
+
+CNN+Attention : sa → ga → pa → ma → re → ma
+RFC           : pa → ni → pa → ni → ga → ma
+
+
+Processing files:  16%|█▌        | 3/19 [00:06<00:33,  2.08s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test4.wav
+============================================================
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 13.62it/s]  Seg 01  [0.000s – 0.511s]  CNN=sa  RFC=sa
+  Seg 02  [0.511s – 1.486s]  CNN=sa  RFC=sa
+  Seg 03  [1.486s – 1.927s]  CNN=sa  RFC=sa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 13.36it/s]  Seg 04  [1.927s – 2.461s]  CNN=re  RFC=re
+  Seg 05  [2.461s – 2.879s]  CNN=ma  RFC=re
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 13.59it/s]  Seg 06  [2.879s – 3.437s]  CNN=sa  RFC=dha
+
+CNN+Attention : sa → sa → sa → re → ma → sa
+RFC           : sa → sa → sa → re → re → dha
+
+
+Processing files:  21%|██        | 4/19 [00:08<00:29,  1.98s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test5.wav
+============================================================
+  [Edge] Dropping last boundary at 3.367s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 15.43it/s]  Seg 01  [0.000s – 0.557s]  CNN=sa  RFC=sa
+  Seg 02  [0.557s – 0.975s]  CNN=ni  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 15.28it/s]  Seg 03  [0.975s – 1.533s]  CNN=sa  RFC=pa
+  Seg 04  [1.533s – 1.950s]  CNN=sa  RFC=sa
+  Seg 05  [1.950s – 2.485s]  CNN=ma  RFC=ni
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 14.19it/s]  Seg 06  [2.485s – 2.926s]  CNN=ma  RFC=ga
+  Seg 07  [2.926s – 3.428s]  CNN=ma  RFC=dha
+
+CNN+Attention : sa → ni → sa → sa → ma → ma → ma
+RFC           : sa → ga → pa → sa → ni → ga → dha
+
+
+Processing files:  26%|██▋       | 5/19 [00:11<00:31,  2.23s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test6.wav
+============================================================
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 11.70it/s]  Seg 01  [0.116s – 0.511s]  CNN=sa  RFC=pa
+  Seg 02  [0.511s – 0.952s]  CNN=ma  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 10.94it/s]  Seg 03  [0.952s – 1.463s]  CNN=ma  RFC=sa
+  Seg 04  [1.463s – 1.974s]  CNN=sa  RFC=sa
+  Seg 05  [1.974s – 2.392s]  CNN=ma  RFC=ni
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 11.72it/s]  Seg 06  [2.392s – 2.949s]  CNN=ma  RFC=ni
+  Seg 07  [2.949s – 3.456s]  CNN=ma  RFC=pa
+
+CNN+Attention : sa → ma → ma → sa → ma → ma → ma
+RFC           : pa → ga → sa → sa → ni → ni → pa
+
+
+Processing files:  32%|███▏      | 6/19 [00:13<00:30,  2.34s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test7.wav
+============================================================
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 16.33it/s]  Seg 01  [0.000s – 0.488s]  CNN=ma  RFC=sa
+  Seg 02  [0.488s – 1.463s]  CNN=ma  RFC=sa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 15.48it/s]  Seg 03  [1.463s – 1.881s]  CNN=sa  RFC=sa
+  Seg 04  [1.881s – 2.392s]  CNN=ma  RFC=dha
+  Seg 05  [2.392s – 2.902s]  CNN=ni  RFC=sa
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 15.11it/s]
+  Seg 06  [2.902s – 3.400s]  CNN=ma  RFC=pa
+
+CNN+Attention : ma → ma → sa → ma → ni → ma
+RFC           : sa → sa → sa → dha → sa → pa
+
+Processing files:  37%|███▋      | 7/19 [00:15<00:26,  2.18s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test8.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 14.20it/s]  Seg 01  [0.000s – 0.488s]  CNN=sa  RFC=sa
+  Seg 02  [0.488s – 0.998s]  CNN=ga  RFC=ma
+  Seg 03  [0.998s – 1.486s]  CNN=ma  RFC=dha
+  Seg 04  [1.486s – 1.904s]  CNN=sa  RFC=sa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.95it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.93it/s]  Seg 05  [1.904s – 2.415s]  CNN=ma  RFC=sa
+  Seg 06  [2.415s – 2.879s]  CNN=ma  RFC=ga
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.73it/s]
+  Seg 07  [2.879s – 3.428s]  CNN=ma  RFC=ma
+
+CNN+Attention : sa → ga → ma → sa → ma → ma → ma
+RFC           : sa → ma → dha → sa → sa → ga → ma
+
+Processing files:  42%|████▏     | 8/19 [00:17<00:24,  2.18s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test9.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 16.85it/s]  Seg 01  [0.000s – 0.511s]  CNN=sa  RFC=pa
+  Seg 02  [0.511s – 0.952s]  CNN=ni  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 15.50it/s]  Seg 03  [0.952s – 1.556s]  CNN=sa  RFC=sa
+  Seg 04  [1.556s – 1.881s]  CNN=ma  RFC=ga
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.80it/s]  Seg 05  [1.881s – 2.392s]  CNN=ma  RFC=dha
+  Seg 06  [2.392s – 2.902s]  CNN=ma  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.87it/s]
+  Seg 07  [2.902s – 3.386s]  CNN=ma  RFC=ga
+
+CNN+Attention : sa → ni → sa → ma → ma → ma → ma
+RFC           : pa → ni → sa → ga → dha → ni → ga
+
+Processing files:  47%|████▋     | 9/19 [00:19<00:20,  2.08s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test10.wav
+============================================================
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.000–0.163]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 15.83it/s]  Seg 01  [0.163s – 0.534s]  CNN=ga  RFC=dha
+  Seg 02  [0.534s – 1.022s]  CNN=ni  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 16.28it/s]  Seg 03  [1.022s – 1.602s]  CNN=ma  RFC=sa
+  Seg 04  [1.602s – 1.997s]  CNN=sa  RFC=pa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.79it/s]  Seg 05  [1.997s – 2.485s]  CNN=ni  RFC=ni
+  Seg 06  [2.485s – 2.972s]  CNN=ni  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.94it/s]
+  Seg 07  [2.972s – 3.489s]  CNN=ma  RFC=ma
+
+CNN+Attention : ga → ni → ma → sa → ni → ni → ma
+RFC           : dha → ni → sa → pa → ni → ni → ma
+
+Processing files:  53%|█████▎    | 10/19 [00:21<00:18,  2.04s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test11.wav
+============================================================
+  [Edge] Dropping last boundary at 3.320s
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  40%|████      | 2/5 [00:00<00:00, 15.18it/s]  Seg 01  [0.000s – 0.488s]  CNN=sa  RFC=pa
+  Seg 02  [0.488s – 0.929s]  CNN=ni  RFC=ma
+
+Classifying segments:  80%|████████  | 4/5 [00:00<00:00, 15.28it/s]  Seg 03  [0.929s – 1.509s]  CNN=ma  RFC=ma
+  Seg 04  [1.509s – 2.438s]  CNN=sa  RFC=ga
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00, 15.00it/s]  Seg 05  [2.438s – 3.404s]  CNN=ma  RFC=ma
+
+CNN+Attention : sa → ni → ma → sa → ma
+RFC           : pa → ma → ma → ga → ma
+
+
+Processing files:  58%|█████▊    | 11/19 [00:23<00:15,  1.98s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test12.wav
+============================================================
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  40%|████      | 2/5 [00:00<00:00, 11.49it/s]  Seg 01  [0.000s – 1.509s]  CNN=sa  RFC=dha
+  Seg 02  [1.509s – 1.974s]  CNN=sa  RFC=sa
+  Seg 03  [1.974s – 2.461s]  CNN=ma  RFC=ma
+
+Classifying segments:  80%|████████  | 4/5 [00:00<00:00, 10.42it/s]  Seg 04  [2.461s – 2.926s]  CNN=ni  RFC=ma
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00, 10.51it/s]  Seg 05  [2.926s – 3.348s]  CNN=ma  RFC=ga
+
+CNN+Attention : sa → sa → ma → ni → ma
+RFC           : dha → sa → ma → ma → ga
+
+
+Processing files:  63%|██████▎   | 12/19 [00:25<00:15,  2.19s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test13.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 12.48it/s]  Seg 01  [0.000s – 0.534s]  CNN=sa  RFC=sa
+  Seg 02  [0.534s – 0.952s]  CNN=ni  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 10.46it/s]  Seg 03  [0.952s – 1.556s]  CNN=ma  RFC=pa
+  Seg 04  [1.556s – 1.997s]  CNN=sa  RFC=sa
+  Seg 05  [1.997s – 2.461s]  CNN=ni  RFC=ma
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 10.81it/s]  Seg 06  [2.461s – 2.972s]  CNN=ga  RFC=ga
+  Seg 07  [2.972s – 3.414s]  CNN=ma  RFC=ma
+
+CNN+Attention : sa → ni → ma → sa → ni → ga → ma
+RFC           : sa → ma → pa → sa → ma → ga → ma
+
+
+Processing files:  68%|██████▊   | 13/19 [00:28<00:14,  2.35s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test14.wav
+============================================================
+  [Edge] Dropping last boundary at 3.320s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 16.75it/s]  Seg 01  [0.000s – 0.488s]  CNN=pa  RFC=sa
+  Seg 02  [0.488s – 0.998s]  CNN=ni  RFC=ni
+  Seg 03  [0.998s – 1.463s]  CNN=sa  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 16.52it/s]  Seg 04  [1.463s – 1.927s]  CNN=sa  RFC=sa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.41it/s]  Seg 05  [1.927s – 2.485s]  CNN=ma  RFC=ni
+  Seg 06  [2.485s – 2.949s]  CNN=ni  RFC=ma
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.20it/s]  Seg 07  [2.949s – 3.423s]  CNN=ma  RFC=ni
+
+CNN+Attention : pa → ni → sa → sa → ma → ni → ma
+RFC           : sa → ni → ma → sa → ni → ma → ni
+
+
+Processing files:  74%|███████▎  | 14/19 [00:30<00:11,  2.27s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test15.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 17.27it/s]  Seg 01  [0.000s – 0.488s]  CNN=sa  RFC=sa
+  Seg 02  [0.488s – 0.929s]  CNN=ma  RFC=ma
+  Seg 03  [0.929s – 1.486s]  CNN=sa  RFC=pa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 16.75it/s]  Seg 04  [1.486s – 1.927s]  CNN=sa  RFC=sa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 16.06it/s]  Seg 05  [1.927s – 2.485s]  CNN=ni  RFC=ni
+  Seg 06  [2.485s – 2.926s]  CNN=ma  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.82it/s]  Seg 07  [2.926s – 3.414s]  CNN=ma  RFC=sa
+
+CNN+Attention : sa → ma → sa → sa → ni → ma → ma
+RFC           : sa → ma → pa → sa → ni → ni → sa
+
+
+Processing files:  79%|███████▉  | 15/19 [00:32<00:08,  2.19s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test16.wav
+============================================================
+  [Edge] Dropping last boundary at 3.297s
+Boundaries detected: 7
+  [Edge] Dropping short segment [1.393–1.556]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 14.95it/s]  Seg 01  [0.000s – 0.488s]  CNN=pa  RFC=sa
+  Seg 02  [0.488s – 0.975s]  CNN=ga  RFC=ma
+  Seg 03  [0.975s – 1.393s]  CNN=ma  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.99it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.08it/s]  Seg 04  [1.556s – 1.950s]  CNN=sa  RFC=sa
+  Seg 05  [1.950s – 2.415s]  CNN=ga  RFC=ni
+  Seg 06  [2.415s – 2.902s]  CNN=ni  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 14.94it/s]
+  Seg 07  [2.902s – 3.386s]  CNN=ma  RFC=sa
+
+CNN+Attention : pa → ga → ma → sa → ga → ni → ma
+RFC           : sa → ma → ma → sa → ni → ni → sa
+
+Processing files:  84%|████████▍ | 16/19 [00:34<00:06,  2.16s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test17.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 15.21it/s]  Seg 01  [0.000s – 0.511s]  CNN=pa  RFC=sa
+  Seg 02  [0.511s – 1.022s]  CNN=re  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 15.91it/s]  Seg 03  [1.022s – 1.533s]  CNN=sa  RFC=ma
+  Seg 04  [1.533s – 1.974s]  CNN=sa  RFC=pa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 16.12it/s]  Seg 05  [1.974s – 2.438s]  CNN=ma  RFC=ma
+  Seg 06  [2.438s – 2.995s]  CNN=ni  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.95it/s]
+  Seg 07  [2.995s – 3.475s]  CNN=ma  RFC=ma
+
+CNN+Attention : pa → re → sa → sa → ma → ni → ma
+RFC           : sa → ma → ma → pa → ma → ni → ma
+
+Processing files:  89%|████████▉ | 17/19 [00:37<00:04,  2.23s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test18.wav
+============================================================
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 16.75it/s]  Seg 01  [0.000s – 0.534s]  CNN=sa  RFC=sa
+  Seg 02  [0.534s – 1.440s]  CNN=sa  RFC=ma
+  Seg 03  [1.440s – 1.997s]  CNN=sa  RFC=sa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 16.39it/s]  Seg 04  [1.997s – 2.508s]  CNN=re  RFC=dha
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 15.25it/s]  Seg 05  [2.508s – 2.972s]  CNN=ni  RFC=ni
+  Seg 06  [2.972s – 3.470s]  CNN=ma  RFC=pa
+
+CNN+Attention : sa → sa → sa → re → ni → ma
+RFC           : sa → ma → sa → dha → ni → pa
+
+
+Processing files:  95%|█████████▍| 18/19 [00:39<00:02,  2.32s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+Processing: test19.wav
+============================================================
+  [Edge] Dropping last boundary at 3.251s
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  17%|█▋        | 1/6 [00:00<00:00,  6.91it/s]  Seg 01  [0.000s – 0.488s]  CNN=sa  RFC=pa
+
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00,  7.69it/s]  Seg 02  [0.488s – 1.486s]  CNN=sa  RFC=pa
+
+Classifying segments:  50%|█████     | 3/6 [00:00<00:00,  8.34it/s]  Seg 03  [1.486s – 1.950s]  CNN=sa  RFC=sa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00,  8.29it/s]  Seg 04  [1.950s – 2.438s]  CNN=ma  RFC=ga
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00,  8.85it/s]  Seg 05  [2.438s – 2.856s]  CNN=ni  RFC=ga
+  Seg 06  [2.856s – 3.357s]  CNN=ma  RFC=pa
+
+CNN+Attention : sa → sa → sa → ma → ni → ma
+RFC           : pa → pa → sa → ga → ga → pa
+
+
+Processing files: 100%|██████████| 19/19 [00:42<00:00,  2.25s/it]Saved visualization → /content/E3_pipeline_output.png
+
+============================================================
+experiment  clip_name  n_segments                                                   cnn_sequence                                                     rfc_sequence
+        E3  test1.wav          13 pa → re → ma → sa → sa → re → pa → pa → ni → ni → ni → re → sa sa → re → dha → sa → dha → ga → sa → sa → ni → ma → ni → re → ga
+        E3  test2.wav           7                               sa → ga → sa → sa → ga → ni → sa                                 pa → ga → sa → pa → ni → ni → ma
+        E3  test3.wav           6                                    sa → ga → pa → ma → re → ma                                      pa → ni → pa → ni → ga → ma
+        E3  test4.wav           6                                    sa → sa → sa → re → ma → sa                                     sa → sa → sa → re → re → dha
+        E3  test5.wav           7                               sa → ni → sa → sa → ma → ma → ma                                sa → ga → pa → sa → ni → ga → dha
+        E3  test6.wav           7                               sa → ma → ma → sa → ma → ma → ma                                 pa → ga → sa → sa → ni → ni → pa
+        E3  test7.wav           6                                    ma → ma → sa → ma → ni → ma                                     sa → sa → sa → dha → sa → pa
+        E3  test8.wav           7                               sa → ga → ma → sa → ma → ma → ma                                sa → ma → dha → sa → sa → ga → ma
+        E3  test9.wav           7                               sa → ni → sa → ma → ma → ma → ma                                pa → ni → sa → ga → dha → ni → ga
+        E3 test10.wav           7                               ga → ni → ma → sa → ni → ni → ma                                dha → ni → sa → pa → ni → ni → ma
+        E3 test11.wav           5                                         sa → ni → ma → sa → ma                                           pa → ma → ma → ga → ma
+        E3 test12.wav           5                                         sa → sa → ma → ni → ma                                          dha → sa → ma → ma → ga
+        E3 test13.wav           7                               sa → ni → ma → sa → ni → ga → ma                                 sa → ma → pa → sa → ma → ga → ma
+        E3 test14.wav           7                               pa → ni → sa → sa → ma → ni → ma                                 sa → ni → ma → sa → ni → ma → ni
+        E3 test15.wav           7                               sa → ma → sa → sa → ni → ma → ma                                 sa → ma → pa → sa → ni → ni → sa
+        E3 test16.wav           7                               pa → ga → ma → sa → ga → ni → ma                                 sa → ma → ma → sa → ni → ni → sa
+        E3 test17.wav           7                               pa → re → sa → sa → ma → ni → ma                                 sa → ma → ma → pa → ma → ni → ma
+        E3 test18.wav           6                                    sa → sa → sa → re → ni → ma                                     sa → ma → sa → dha → ni → pa
+        E3 test19.wav           6                                    sa → sa → sa → ma → ni → ma                                      pa → pa → sa → ga → ga → pa
+
+Saved → /content/E3_results.csv
+
+
+
+
+
+
+E4:
+
+Seg model parameters: 1090738
+Segmentation training:   4%|▍         | 1/25 [06:31<2:36:30, 391.25s/it]  Epoch 01/25  train_loss=0.3568  val_loss=0.1485  val_f1=0.741  prec=0.594  rec=0.985
+Segmentation training:  20%|██        | 5/25 [15:40<53:10, 159.55s/it]  Epoch 05/25  train_loss=0.0670  val_loss=0.1164  val_f1=0.870  prec=0.785  rec=0.976
+Segmentation training:  40%|████      | 10/25 [26:53<34:28, 137.91s/it]  Epoch 10/25  train_loss=0.0422  val_loss=0.0737  val_f1=0.891  prec=0.812  rec=0.987
+Segmentation training:  60%|██████    | 15/25 [38:02<22:22, 134.27s/it]  Epoch 15/25  train_loss=0.0167  val_loss=0.1008  val_f1=0.931  prec=0.891  rec=0.975
+Segmentation training:  80%|████████  | 20/25 [49:04<11:02, 132.49s/it]  Epoch 20/25  train_loss=0.0040  val_loss=0.1710  val_f1=0.944  prec=0.926  rec=0.962
+Segmentation training: 100%|██████████| 25/25 [1:00:05<00:00, 144.21s/it]
+  Epoch 25/25  train_loss=0.0011  val_loss=0.2232  val_f1=0.949  prec=0.943  rec=0.954
+
+Saved → /content/E4_seg_crnn.pth
+
+Best val F1        : 0.949
+Best val Precision : 0.943
+Best val Recall    : 0.987
+
+
+Upload one or more test flute .wav files:
+No file chosen Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable.
+Saving test1.wav to test1.wav
+Saving test2.wav to test2.wav
+Saving test3.wav to test3.wav
+Saving test4.wav to test4.wav
+Saving test5.wav to test5.wav
+Saving test6.wav to test6.wav
+Saving test7.wav to test7.wav
+Saving test8.wav to test8.wav
+Saving test9.wav to test9.wav
+Saving test10.wav to test10.wav
+Saving test11.wav to test11.wav
+Saving test12.wav to test12.wav
+Saving test13.wav to test13.wav
+Saving test14.wav to test14.wav
+Saving test15.wav to test15.wav
+Saving test16.wav to test16.wav
+Saving test17.wav to test17.wav
+Saving test18.wav to test18.wav
+Saving test19.wav to test19.wav
+Processing files:   0%|          | 0/19 [00:00<?, ?it/s]
+============================================================
+Processing: test1.wav
+============================================================
+Boundaries detected: 10
+Classifying 11 segments...
+
+Classifying segments:   0%|          | 0/11 [00:00<?, ?it/s]
+Classifying segments:   9%|▉         | 1/11 [00:00<00:01,  5.73it/s]  Seg 01  [0.000s – 1.161s]  CNN=sa  RFC=sa
+
+Classifying segments:  18%|█▊        | 2/11 [00:00<00:01,  6.65it/s]  Seg 02  [1.161s – 3.088s]  CNN=ma  RFC=sa
+
+Classifying segments:  27%|██▋       | 3/11 [00:00<00:01,  7.65it/s]  Seg 03  [3.088s – 3.576s]  CNN=ma  RFC=re
+
+Classifying segments:  36%|███▋      | 4/11 [00:00<00:00,  8.21it/s]  Seg 04  [3.576s – 4.017s]  CNN=dha  RFC=sa
+
+Classifying segments:  45%|████▌     | 5/11 [00:00<00:00,  7.93it/s]  Seg 05  [4.017s – 4.992s]  CNN=sa  RFC=sa
+
+Classifying segments:  55%|█████▍    | 6/11 [00:00<00:00,  7.60it/s]  Seg 06  [4.992s – 7.523s]  CNN=re  RFC=sa
+
+Classifying segments:  64%|██████▎   | 7/11 [00:00<00:00,  8.08it/s]  Seg 07  [7.523s – 7.964s]  CNN=ni  RFC=sa
+
+Classifying segments:  73%|███████▎  | 8/11 [00:01<00:00,  8.05it/s]  Seg 08  [7.964s – 8.940s]  CNN=re  RFC=re
+
+Classifying segments:  82%|████████▏ | 9/11 [00:01<00:00,  8.13it/s]  Seg 09  [8.940s – 9.938s]  CNN=ga  RFC=ga
+
+Classifying segments:  91%|█████████ | 10/11 [00:01<00:00,  7.76it/s]  Seg 10  [9.938s – 11.006s]  CNN=re  RFC=re
+
+Classifying segments: 100%|██████████| 11/11 [00:01<00:00,  7.64it/s]  Seg 11  [11.006s – 11.891s]  CNN=ga  RFC=ga
+
+CNN+Attention : sa → ma → ma → dha → sa → re → ni → re → ga → re → ga
+RFC           : sa → sa → re → sa → sa → sa → sa → re → ga → re → ga
+
+
+Processing files:   5%|▌         | 1/19 [00:04<01:12,  4.05s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test2.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 15.19it/s]  Seg 01  [0.000s – 0.441s]  CNN=sa  RFC=sa
+  Seg 02  [0.441s – 0.929s]  CNN=re  RFC=re
+  Seg 03  [0.929s – 1.416s]  CNN=ga  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 14.22it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 14.95it/s]  Seg 04  [1.416s – 1.881s]  CNN=sa  RFC=sa
+  Seg 05  [1.881s – 2.368s]  CNN=ma  RFC=re
+  Seg 06  [2.368s – 2.879s]  CNN=ga  RFC=ga
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 14.42it/s]
+  Seg 07  [2.879s – 3.367s]  CNN=dha  RFC=ma
+
+CNN+Attention : sa → re → ga → sa → ma → ga → dha
+RFC           : sa → re → ga → sa → re → ga → ma
+
+Processing files:  11%|█         | 2/19 [00:06<00:48,  2.83s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test3.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 15.69it/s]  Seg 01  [0.000s – 0.464s]  CNN=re  RFC=re
+  Seg 02  [0.464s – 0.906s]  CNN=ga  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 15.46it/s]  Seg 03  [0.906s – 1.347s]  CNN=dha  RFC=ma
+  Seg 04  [1.347s – 1.927s]  CNN=ma  RFC=re
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 15.30it/s]  Seg 05  [1.927s – 2.392s]  CNN=ga  RFC=ga
+  Seg 06  [2.392s – 2.856s]  CNN=ma  RFC=ma
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 15.28it/s]
+  Seg 07  [2.856s – 3.386s]  CNN=dha  RFC=pa
+
+CNN+Attention : re → ga → dha → ma → ga → ma → dha
+RFC           : re → ga → ma → re → ga → ma → pa
+
+Processing files:  16%|█▌        | 3/19 [00:07<00:38,  2.41s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test4.wav
+============================================================
+Boundaries detected: 7
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00, 13.06it/s]  Seg 01  [0.000s – 0.488s]  CNN=ga  RFC=ga
+  Seg 02  [0.488s – 0.998s]  CNN=ma  RFC=ma
+  Seg 03  [0.998s – 1.207s]  CNN=ga  RFC=ma
+
+Classifying segments:  50%|█████     | 4/8 [00:00<00:00, 12.33it/s]  Seg 04  [1.207s – 1.509s]  CNN=dha  RFC=pa
+  Seg 05  [1.509s – 1.927s]  CNN=ga  RFC=ga
+
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00, 13.13it/s]  Seg 06  [1.927s – 2.438s]  CNN=ma  RFC=ma
+
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00, 12.64it/s]  Seg 07  [2.438s – 2.926s]  CNN=ga  RFC=pa
+  Seg 08  [2.926s – 3.437s]  CNN=dha  RFC=dha
+
+CNN+Attention : ga → ma → ga → dha → ga → ma → ga → dha
+RFC           : ga → ma → ma → pa → ga → ma → pa → dha
+
+
+Processing files:  21%|██        | 4/19 [00:10<00:34,  2.30s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test5.wav
+============================================================
+  [Edge] Dropping last boundary at 3.181s
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 13.30it/s]  Seg 01  [0.116s – 0.511s]  CNN=ma  RFC=ma
+  Seg 02  [0.511s – 0.998s]  CNN=pa  RFC=pa
+  Seg 03  [0.998s – 1.556s]  CNN=dha  RFC=dha
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 13.93it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 14.47it/s]  Seg 04  [1.556s – 1.927s]  CNN=ma  RFC=ma
+  Seg 05  [1.927s – 2.461s]  CNN=ga  RFC=pa
+  Seg 06  [2.461s – 2.949s]  CNN=dha  RFC=dha
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 14.26it/s]
+  Seg 07  [2.949s – 3.428s]  CNN=dha  RFC=sa
+
+CNN+Attention : ma → pa → dha → ma → ga → dha → dha
+RFC           : ma → pa → dha → ma → pa → dha → sa
+
+Processing files:  26%|██▋       | 5/19 [00:12<00:30,  2.18s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test6.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.511s]  CNN=ga  RFC=pa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 12.94it/s]  Seg 02  [0.511s – 0.975s]  CNN=dha  RFC=dha
+  Seg 03  [0.975s – 1.509s]  CNN=dha  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 12.36it/s]  Seg 04  [1.509s – 1.974s]  CNN=pa  RFC=pa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 13.16it/s]  Seg 05  [1.974s – 2.415s]  CNN=dha  RFC=dha
+  Seg 06  [2.415s – 2.926s]  CNN=ni  RFC=ni
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 12.29it/s]  Seg 07  [2.926s – 3.456s]  CNN=sa  RFC=sa
+
+CNN+Attention : ga → dha → dha → pa → dha → ni → sa
+RFC           : pa → dha → ni → pa → dha → ni → sa
+
+
+Processing files:  32%|███▏      | 6/19 [00:14<00:29,  2.27s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test7.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.464s]  CNN=dha  RFC=dha
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  7.90it/s]  Seg 02  [0.464s – 0.929s]  CNN=ni  RFC=ni
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  8.35it/s]  Seg 03  [0.929s – 1.486s]  CNN=sa  RFC=sa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.63it/s]  Seg 04  [1.486s – 1.927s]  CNN=dha  RFC=dha
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.60it/s]  Seg 05  [1.927s – 2.415s]  CNN=ni  RFC=ni
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.96it/s]  Seg 06  [2.415s – 2.902s]  CNN=sa  RFC=sa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  7.93it/s]  Seg 07  [2.902s – 3.400s]  CNN=ma  RFC=re
+
+CNN+Attention : dha → ni → sa → dha → ni → sa → ma
+RFC           : dha → ni → sa → dha → ni → sa → re
+
+
+Processing files:  37%|███▋      | 7/19 [00:17<00:30,  2.53s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test8.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:01,  5.86it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  7.59it/s]  Seg 01  [0.000s – 0.488s]  CNN=ni  RFC=ni
+  Seg 02  [0.488s – 0.975s]  CNN=sa  RFC=sa
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  7.69it/s]
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.97it/s]  Seg 03  [0.975s – 1.533s]  CNN=ma  RFC=re
+  Seg 04  [1.533s – 1.927s]  CNN=ni  RFC=ni
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.21it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.08it/s]  Seg 05  [1.927s – 2.415s]  CNN=sa  RFC=sa
+  Seg 06  [2.415s – 2.879s]  CNN=ma  RFC=ni
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  7.33it/s]
+  Seg 07  [2.879s – 3.428s]  CNN=dha  RFC=ni
+
+CNN+Attention : ni → sa → ma → ni → sa → ma → dha
+RFC           : ni → sa → re → ni → sa → ni → ni
+
+Processing files:  42%|████▏     | 8/19 [00:20<00:27,  2.53s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test9.wav
+============================================================
+  [Edge] Dropping last boundary at 3.158s
+Boundaries detected: 5
+  [Edge] Dropping short segment [0.000–0.093]s
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  20%|██        | 1/5 [00:00<00:00,  9.79it/s]  Seg 01  [0.093s – 0.511s]  CNN=ga  RFC=ni
+
+Classifying segments:  40%|████      | 2/5 [00:00<00:00,  8.65it/s]  Seg 02  [0.511s – 1.533s]  CNN=ma  RFC=sa
+
+Classifying segments:  60%|██████    | 3/5 [00:00<00:00,  8.25it/s]  Seg 03  [1.533s – 1.927s]  CNN=ga  RFC=ni
+
+Classifying segments:  80%|████████  | 4/5 [00:00<00:00,  8.51it/s]  Seg 04  [1.927s – 2.415s]  CNN=dha  RFC=ni
+
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00,  8.45it/s]  Seg 05  [2.415s – 3.386s]  CNN=sa  RFC=sa
+
+CNN+Attention : ga → ma → ga → dha → sa
+RFC           : ni → sa → ni → ni → sa
+
+
+Processing files:  47%|████▋     | 9/19 [00:22<00:25,  2.51s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test10.wav
+============================================================
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.000–0.139]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.139s – 0.534s]  CNN=ma  RFC=re
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.74it/s]  Seg 02  [0.534s – 1.022s]  CNN=ma  RFC=sa
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  9.10it/s]  Seg 03  [1.022s – 1.602s]  CNN=dha  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  8.86it/s]  Seg 04  [1.602s – 1.997s]  CNN=ma  RFC=re
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  8.80it/s]  Seg 05  [1.997s – 2.485s]  CNN=sa  RFC=sa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  9.01it/s]  Seg 06  [2.485s – 2.949s]  CNN=ni  RFC=ni
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  9.10it/s]  Seg 07  [2.949s – 3.489s]  CNN=dha  RFC=dha
+
+CNN+Attention : ma → ma → dha → ma → sa → ni → dha
+RFC           : re → sa → ni → re → sa → ni → dha
+
+
+Processing files:  53%|█████▎    | 10/19 [00:24<00:22,  2.46s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test11.wav
+============================================================
+  [Edge] Dropping last boundary at 3.135s
+Boundaries detected: 4
+Classifying 5 segments...
+
+Classifying segments:   0%|          | 0/5 [00:00<?, ?it/s]
+Classifying segments:  20%|██        | 1/5 [00:00<00:00,  6.86it/s]
+Classifying segments:  40%|████      | 2/5 [00:00<00:00,  8.19it/s]  Seg 01  [0.000s – 1.045s]  CNN=ni  RFC=sa
+  Seg 02  [1.045s – 1.509s]  CNN=dha  RFC=dha
+
+Classifying segments:  60%|██████    | 3/5 [00:00<00:00,  7.64it/s]
+Classifying segments: 100%|██████████| 5/5 [00:00<00:00,  8.47it/s]  Seg 03  [1.509s – 2.485s]  CNN=sa  RFC=sa
+  Seg 04  [2.485s – 2.926s]  CNN=dha  RFC=dha
+  Seg 05  [2.926s – 3.404s]  CNN=ga  RFC=pa
+
+CNN+Attention : ni → dha → sa → dha → ga
+RFC           : sa → dha → sa → dha → pa
+
+
+Processing files:  58%|█████▊    | 11/19 [00:27<00:18,  2.36s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test12.wav
+============================================================
+Boundaries detected: 7
+  [Edge] Dropping short segment [1.997–2.159]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.534s]  CNN=ni  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 10.43it/s]  Seg 02  [0.534s – 0.975s]  CNN=dha  RFC=dha
+
+  Seg 03  [0.975s – 1.509s]  CNN=ga  RFC=pa
+  Seg 04  [1.509s – 1.997s]  CNN=ni  RFC=ni
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 10.19it/s]  Seg 05  [2.159s – 2.461s]  CNN=dha  RFC=dha
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00, 10.70it/s]  Seg 06  [2.461s – 2.902s]  CNN=ga  RFC=pa
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 10.14it/s]  Seg 07  [2.902s – 3.348s]  CNN=dha  RFC=ma
+
+CNN+Attention : ni → dha → ga → ni → dha → ga → dha
+RFC           : sa → dha → pa → ni → dha → pa → ma
+
+
+Processing files:  63%|██████▎   | 12/19 [00:29<00:17,  2.43s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test13.wav
+============================================================
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  6.82it/s]  Seg 01  [0.116s – 0.534s]  CNN=dha  RFC=dha
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  6.10it/s]  Seg 02  [0.534s – 0.998s]  CNN=ga  RFC=pa
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  6.97it/s]  Seg 03  [0.998s – 1.556s]  CNN=dha  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  6.95it/s]  Seg 04  [1.556s – 1.997s]  CNN=dha  RFC=dha
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.41it/s]  Seg 05  [1.997s – 2.485s]  CNN=ga  RFC=pa
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.94it/s]  Seg 06  [2.485s – 2.972s]  CNN=ma  RFC=ma
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  7.54it/s]  Seg 07  [2.972s – 3.414s]  CNN=dha  RFC=ma
+
+CNN+Attention : dha → ga → dha → dha → ga → ma → dha
+RFC           : dha → pa → ma → dha → pa → ma → ma
+
+
+Processing files:  68%|██████▊   | 13/19 [00:32<00:15,  2.66s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test14.wav
+============================================================
+  [Edge] Dropping last boundary at 3.228s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  8.70it/s]  Seg 01  [0.000s – 0.534s]  CNN=pa  RFC=pa
+  Seg 02  [0.534s – 0.998s]  CNN=ma  RFC=ma
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  8.31it/s]
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.08it/s]  Seg 03  [0.998s – 1.509s]  CNN=dha  RFC=ga
+  Seg 04  [1.509s – 1.950s]  CNN=ga  RFC=pa
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.52it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.39it/s]  Seg 05  [1.950s – 2.485s]  CNN=ma  RFC=ma
+  Seg 06  [2.485s – 2.926s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  7.41it/s]
+  Seg 07  [2.926s – 3.423s]  CNN=ma  RFC=re
+
+CNN+Attention : pa → ma → dha → ga → ma → ga → ma
+RFC           : pa → ma → ga → pa → ma → ga → re
+
+Processing files:  74%|███████▎  | 14/19 [00:35<00:13,  2.78s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test15.wav
+============================================================
+Boundaries detected: 7
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  12%|█▎        | 1/8 [00:00<00:00,  9.82it/s]  Seg 01  [0.000s – 0.488s]  CNN=ma  RFC=ma
+
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  8.22it/s]  Seg 02  [0.488s – 0.929s]  CNN=ga  RFC=ga
+
+Classifying segments:  50%|█████     | 4/8 [00:00<00:00, 11.17it/s]  Seg 03  [0.929s – 1.207s]  CNN=ga  RFC=re
+  Seg 04  [1.207s – 1.509s]  CNN=dha  RFC=re
+  Seg 05  [1.509s – 1.927s]  CNN=ma  RFC=ma
+
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00, 10.07it/s]  Seg 06  [1.927s – 2.461s]  CNN=ga  RFC=ga
+  Seg 07  [2.461s – 2.949s]  CNN=ma  RFC=re
+
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00,  9.14it/s]  Seg 08  [2.949s – 3.414s]  CNN=ma  RFC=sa
+
+CNN+Attention : ma → ga → ga → dha → ma → ga → ma → ma
+RFC           : ma → ga → re → re → ma → ga → re → sa
+
+
+Processing files:  79%|███████▉  | 15/19 [00:38<00:10,  2.69s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test16.wav
+============================================================
+  [Edge] Dropping last boundary at 3.158s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  8.85it/s]  Seg 01  [0.000s – 0.488s]  CNN=sa  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.30it/s]  Seg 02  [0.488s – 0.975s]  CNN=re  RFC=re
+  Seg 03  [0.975s – 1.486s]  CNN=ga  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  9.91it/s]  Seg 04  [1.486s – 1.950s]  CNN=sa  RFC=sa
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  9.63it/s]  Seg 05  [1.950s – 2.415s]  CNN=ma  RFC=re
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  8.50it/s]  Seg 06  [2.415s – 2.902s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  9.06it/s]  Seg 07  [2.902s – 3.386s]  CNN=dha  RFC=ma
+
+CNN+Attention : sa → re → ga → sa → ma → ga → dha
+RFC           : sa → re → ga → sa → re → ga → ma
+
+
+Processing files:  84%|████████▍ | 16/19 [00:40<00:07,  2.63s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test17.wav
+============================================================
+  [Edge] Dropping last boundary at 3.251s
+Boundaries detected: 8
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]  Seg 01  [0.116s – 0.511s]  CNN=re  RFC=re
+
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  9.63it/s]  Seg 02  [0.511s – 0.998s]  CNN=ga  RFC=ga
+  Seg 03  [0.998s – 1.254s]  CNN=ma  RFC=ma
+
+Classifying segments:  50%|█████     | 4/8 [00:00<00:00, 11.71it/s]  Seg 04  [1.254s – 1.533s]  CNN=dha  RFC=ma
+  Seg 05  [1.533s – 1.974s]  CNN=re  RFC=re
+
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00, 10.76it/s]  Seg 06  [1.974s – 2.438s]  CNN=ga  RFC=ga
+  Seg 07  [2.438s – 2.972s]  CNN=ma  RFC=re
+
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00, 10.35it/s]  Seg 08  [2.972s – 3.475s]  CNN=ga  RFC=pa
+
+CNN+Attention : re → ga → ma → dha → re → ga → ma → ga
+RFC           : re → ga → ma → ma → re → ga → re → pa
+
+
+Processing files:  89%|████████▉ | 17/19 [00:43<00:05,  2.58s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test18.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  9.27it/s]  Seg 01  [0.000s – 0.557s]  CNN=ga  RFC=ga
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.23it/s]  Seg 02  [0.557s – 1.022s]  CNN=ma  RFC=ma
+  Seg 03  [1.022s – 1.533s]  CNN=dha  RFC=pa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  9.93it/s]  Seg 04  [1.533s – 1.997s]  CNN=ga  RFC=ga
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  9.61it/s]  Seg 05  [1.997s – 2.485s]  CNN=ma  RFC=ma
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  9.56it/s]  Seg 06  [2.485s – 2.995s]  CNN=ga  RFC=pa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  9.56it/s]  Seg 07  [2.995s – 3.470s]  CNN=dha  RFC=dha
+
+CNN+Attention : ga → ma → dha → ga → ma → ga → dha
+RFC           : ga → ma → pa → ga → ma → pa → dha
+
+
+Processing files:  95%|█████████▍| 18/19 [00:46<00:02,  2.78s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+Processing: test19.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:01,  5.59it/s]
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  6.64it/s]  Seg 01  [0.000s – 0.464s]  CNN=ma  RFC=ma
+  Seg 02  [0.464s – 0.975s]  CNN=ga  RFC=ga
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  7.37it/s]
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.51it/s]  Seg 03  [0.975s – 1.509s]  CNN=dha  RFC=dha
+  Seg 04  [1.509s – 1.904s]  CNN=ma  RFC=ma
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.38it/s]
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.57it/s]  Seg 05  [1.904s – 2.415s]  CNN=ga  RFC=pa
+  Seg 06  [2.415s – 2.879s]  CNN=dha  RFC=dha
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  7.26it/s]
+  Seg 07  [2.879s – 3.357s]  CNN=dha  RFC=sa
+
+CNN+Attention : ma → ga → dha → ma → ga → dha → dha
+RFC           : ma → ga → dha → ma → pa → dha → sa
+
+Processing files: 100%|██████████| 19/19 [00:49<00:00,  2.62s/it]Saved visualization → /content/E4_pipeline_output.png
+
+============================================================
+experiment  clip_name  n_segments                                          cnn_sequence                                         rfc_sequence
+        E4  test1.wav          11 sa → ma → ma → dha → sa → re → ni → re → ga → re → ga sa → sa → re → sa → sa → sa → sa → re → ga → re → ga
+        E4  test2.wav           7                     sa → re → ga → sa → ma → ga → dha                     sa → re → ga → sa → re → ga → ma
+        E4  test3.wav           7                    re → ga → dha → ma → ga → ma → dha                     re → ga → ma → re → ga → ma → pa
+        E4  test4.wav           8               ga → ma → ga → dha → ga → ma → ga → dha               ga → ma → ma → pa → ga → ma → pa → dha
+        E4  test5.wav           7                   ma → pa → dha → ma → ga → dha → dha                   ma → pa → dha → ma → pa → dha → sa
+        E4  test6.wav           7                   ga → dha → dha → pa → dha → ni → sa                   pa → dha → ni → pa → dha → ni → sa
+        E4  test7.wav           7                    dha → ni → sa → dha → ni → sa → ma                   dha → ni → sa → dha → ni → sa → re
+        E4  test8.wav           7                     ni → sa → ma → ni → sa → ma → dha                     ni → sa → re → ni → sa → ni → ni
+        E4  test9.wav           5                               ga → ma → ga → dha → sa                               ni → sa → ni → ni → sa
+        E4 test10.wav           7                    ma → ma → dha → ma → sa → ni → dha                    re → sa → ni → re → sa → ni → dha
+        E4 test11.wav           5                              ni → dha → sa → dha → ga                             sa → dha → sa → dha → pa
+        E4 test12.wav           7                   ni → dha → ga → ni → dha → ga → dha                   sa → dha → pa → ni → dha → pa → ma
+        E4 test13.wav           7                  dha → ga → dha → dha → ga → ma → dha                   dha → pa → ma → dha → pa → ma → ma
+        E4 test14.wav           7                     pa → ma → dha → ga → ma → ga → ma                     pa → ma → ga → pa → ma → ga → re
+        E4 test15.wav           8                ma → ga → ga → dha → ma → ga → ma → ma                ma → ga → re → re → ma → ga → re → sa
+        E4 test16.wav           7                     sa → re → ga → sa → ma → ga → dha                     sa → re → ga → sa → re → ga → ma
+        E4 test17.wav           8                re → ga → ma → dha → re → ga → ma → ga                re → ga → ma → ma → re → ga → re → pa
+        E4 test18.wav           7                    ga → ma → dha → ga → ma → ga → dha                    ga → ma → pa → ga → ma → pa → dha
+        E4 test19.wav           7                   ma → ga → dha → ma → ga → dha → dha                   ma → ga → dha → ma → pa → dha → sa
+
+Saved → /content/E4_results.csv
+
+
+
+
+
+E5:
+Seg model parameters: 1090882
+Segmentation training:   4%|▍         | 1/25 [17:00<6:48:13, 1020.56s/it]  Epoch 01/25  train_loss=0.3747  val_loss=0.1891  val_f1=0.726  prec=0.580  rec=0.973
+Segmentation training:  20%|██        | 5/25 [26:02<1:10:48, 212.44s/it]  Epoch 05/25  train_loss=0.0840  val_loss=0.1697  val_f1=0.731  prec=0.584  rec=0.978
+Segmentation training:  40%|████      | 10/25 [37:25<36:56, 147.78s/it]  Epoch 10/25  train_loss=0.0492  val_loss=0.1013  val_f1=0.886  prec=0.810  rec=0.979
+Segmentation training:  60%|██████    | 15/25 [48:48<23:00, 138.03s/it]  Epoch 15/25  train_loss=0.0211  val_loss=0.1245  val_f1=0.927  prec=0.884  rec=0.974
+Segmentation training:  80%|████████  | 20/25 [59:52<11:05, 133.19s/it]  Epoch 20/25  train_loss=0.0065  val_loss=0.1627  val_f1=0.941  prec=0.919  rec=0.965
+Segmentation training: 100%|██████████| 25/25 [1:10:56<00:00, 170.28s/it]
+  Epoch 25/25  train_loss=0.0017  val_loss=0.2243  val_f1=0.944  prec=0.935  rec=0.953
+
+Saved → /content/E5_seg_crnn.pth
+
+Best val F1        : 0.944
+Best val Precision : 0.935
+Best val Recall    : 0.993
+
+
+
+Upload one or more test flute .wav files:
+No file chosen Upload widget is only available when the cell has been executed in the current browser session. Please rerun this cell to enable.
+Saving test1.wav to test1.wav
+Saving test2.wav to test2.wav
+Saving test3.wav to test3.wav
+Saving test4.wav to test4.wav
+Saving test5.wav to test5.wav
+Saving test6.wav to test6.wav
+Saving test7.wav to test7.wav
+Saving test8.wav to test8.wav
+Saving test9.wav to test9.wav
+Saving test10.wav to test10.wav
+Saving test11.wav to test11.wav
+Saving test12.wav to test12.wav
+Saving test13.wav to test13.wav
+Saving test14.wav to test14.wav
+Saving test15.wav to test15.wav
+Saving test16.wav to test16.wav
+Saving test17.wav to test17.wav
+Saving test18.wav to test18.wav
+Saving test19.wav to test19.wav
+Processing files:   0%|          | 0/19 [00:00<?, ?it/s]
+============================================================
+Processing: test1.wav
+============================================================
+Boundaries detected: 9
+Classifying 10 segments...
+
+Classifying segments:   0%|          | 0/10 [00:00<?, ?it/s]
+Classifying segments:  20%|██        | 2/10 [00:00<00:00, 13.65it/s]  Seg 01  [0.000s – 1.161s]  CNN=sa  RFC=sa
+  Seg 02  [1.161s – 3.065s]  CNN=re  RFC=sa
+  Seg 03  [3.065s – 3.994s]  CNN=re  RFC=sa
+
+Classifying segments:  40%|████      | 4/10 [00:00<00:00, 13.03it/s]
+Classifying segments:  60%|██████    | 6/10 [00:00<00:00, 14.14it/s]  Seg 04  [3.994s – 4.992s]  CNN=sa  RFC=sa
+  Seg 05  [4.992s – 5.968s]  CNN=re  RFC=re
+  Seg 06  [5.968s – 7.941s]  CNN=sa  RFC=sa
+
+Classifying segments:  80%|████████  | 8/10 [00:00<00:00, 14.52it/s]
+Classifying segments: 100%|██████████| 10/10 [00:00<00:00, 14.34it/s]  Seg 07  [7.941s – 8.940s]  CNN=re  RFC=re
+  Seg 08  [8.940s – 9.938s]  CNN=ga  RFC=ga
+  Seg 09  [9.938s – 10.983s]  CNN=re  RFC=re
+  Seg 10  [10.983s – 11.891s]  CNN=ga  RFC=ga
+
+CNN+Attention : sa → re → re → sa → re → sa → re → ga → re → ga
+RFC           : sa → sa → sa → sa → re → sa → re → ga → re → ga
+
+
+Processing files:   5%|▌         | 1/19 [00:02<00:47,  2.62s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test2.wav
+============================================================
+  [Edge] Dropping last boundary at 3.088s
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.929–1.115]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.441s]  CNN=sa  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 14.72it/s]
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 15.08it/s]  Seg 02  [0.441s – 0.929s]  CNN=re  RFC=re
+  Seg 03  [1.115s – 1.416s]  CNN=ni  RFC=ga
+  Seg 04  [1.416s – 1.881s]  CNN=sa  RFC=sa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 13.51it/s]  Seg 05  [1.881s – 2.368s]  CNN=re  RFC=re
+  Seg 06  [2.368s – 2.879s]  CNN=ga  RFC=ga
+  Seg 07  [2.879s – 3.367s]  CNN=ma  RFC=ma
+
+CNN+Attention : sa → re → ni → sa → re → ga → ma
+RFC           : sa → re → ga → sa → re → ga → ma
+
+
+Processing files:  11%|█         | 2/19 [00:04<00:38,  2.25s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test3.wav
+============================================================
+  [Edge] Dropping last boundary at 3.135s
+Boundaries detected: 6
+  [Edge] Dropping short segment [0.906–1.068]s
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.464s]  CNN=re  RFC=re
+
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00, 12.44it/s]  Seg 02  [0.464s – 0.906s]  CNN=ga  RFC=ga
+  Seg 03  [1.068s – 1.904s]  CNN=re  RFC=re
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 12.21it/s]  Seg 04  [1.904s – 2.392s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 12.58it/s]  Seg 05  [2.392s – 2.879s]  CNN=ma  RFC=ma
+  Seg 06  [2.879s – 3.386s]  CNN=ni  RFC=pa
+
+CNN+Attention : re → ga → re → ga → ma → ni
+RFC           : re → ga → re → ga → ma → pa
+
+
+Processing files:  16%|█▌        | 3/19 [00:06<00:33,  2.10s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test4.wav
+============================================================
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.998–1.184]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  9.11it/s]  Seg 01  [0.000s – 0.511s]  CNN=ga  RFC=ga
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00, 12.07it/s]  Seg 02  [0.511s – 0.998s]  CNN=ma  RFC=ma
+  Seg 03  [1.184s – 1.486s]  CNN=dha  RFC=pa
+  Seg 04  [1.486s – 1.927s]  CNN=ga  RFC=ga
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00, 12.54it/s]  Seg 05  [1.927s – 2.461s]  CNN=ma  RFC=ma
+  Seg 06  [2.461s – 2.926s]  CNN=pa  RFC=pa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 12.21it/s]  Seg 07  [2.926s – 3.437s]  CNN=dha  RFC=dha
+
+CNN+Attention : ga → ma → dha → ga → ma → pa → dha
+RFC           : ga → ma → pa → ga → ma → pa → dha
+
+
+Processing files:  21%|██        | 4/19 [00:08<00:33,  2.21s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test5.wav
+============================================================
+  [Edge] Dropping last boundary at 3.158s
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.116s – 0.511s]  CNN=ma  RFC=ma
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.59it/s]  Seg 02  [0.511s – 0.998s]  CNN=pa  RFC=pa
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  8.62it/s]  Seg 03  [0.998s – 1.533s]  CNN=dha  RFC=dha
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  8.61it/s]  Seg 04  [1.533s – 1.974s]  CNN=ma  RFC=ma
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.67it/s]  Seg 05  [1.974s – 2.485s]  CNN=pa  RFC=ga
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.89it/s]  Seg 06  [2.485s – 2.949s]  CNN=dha  RFC=dha
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  8.07it/s]  Seg 07  [2.949s – 3.428s]  CNN=ni  RFC=sa
+
+CNN+Attention : ma → pa → dha → ma → pa → dha → ni
+RFC           : ma → pa → dha → ma → ga → dha → sa
+
+
+Processing files:  26%|██▋       | 5/19 [00:11<00:35,  2.51s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test6.wav
+============================================================
+Boundaries detected: 7
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  12%|█▎        | 1/8 [00:00<00:00,  8.54it/s]
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  6.72it/s]  Seg 01  [0.000s – 0.488s]  CNN=pa  RFC=pa
+  Seg 02  [0.488s – 0.952s]  CNN=dha  RFC=dha
+
+Classifying segments:  38%|███▊      | 3/8 [00:00<00:00,  7.68it/s]
+Classifying segments:  62%|██████▎   | 5/8 [00:00<00:00,  8.86it/s]  Seg 03  [0.952s – 1.184s]  CNN=ni  RFC=ma
+  Seg 04  [1.184s – 1.509s]  CNN=dha  RFC=sa
+  Seg 05  [1.509s – 1.974s]  CNN=pa  RFC=pa
+
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00,  8.24it/s]
+Classifying segments:  88%|████████▊ | 7/8 [00:00<00:00,  8.08it/s]  Seg 06  [1.974s – 2.415s]  CNN=dha  RFC=ma
+  Seg 07  [2.415s – 2.926s]  CNN=ni  RFC=ni
+
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00,  8.19it/s]
+  Seg 08  [2.926s – 3.456s]  CNN=sa  RFC=sa
+
+CNN+Attention : pa → dha → ni → dha → pa → dha → ni → sa
+RFC           : pa → dha → ma → sa → pa → ma → ni → sa
+
+Processing files:  32%|███▏      | 6/19 [00:14<00:32,  2.53s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test7.wav
+============================================================
+  [Edge] Dropping last boundary at 3.135s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  8.98it/s]  Seg 01  [0.000s – 0.464s]  CNN=dha  RFC=dha
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00, 11.07it/s]  Seg 02  [0.464s – 0.929s]  CNN=ni  RFC=ni
+  Seg 03  [0.929s – 1.486s]  CNN=sa  RFC=sa
+  Seg 04  [1.486s – 1.927s]  CNN=dha  RFC=dha
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00, 11.97it/s]  Seg 05  [1.927s – 2.415s]  CNN=ni  RFC=ni
+  Seg 06  [2.415s – 2.879s]  CNN=sa  RFC=sa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00, 11.88it/s]  Seg 07  [2.879s – 3.400s]  CNN=ma  RFC=sa
+
+CNN+Attention : dha → ni → sa → dha → ni → sa → ma
+RFC           : dha → ni → sa → dha → ni → sa → sa
+
+
+Processing files:  37%|███▋      | 7/19 [00:16<00:28,  2.38s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test8.wav
+============================================================
+Boundaries detected: 7
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  12%|█▎        | 1/8 [00:00<00:00,  7.01it/s]  Seg 01  [0.000s – 0.488s]  CNN=ni  RFC=sa
+
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  8.27it/s]  Seg 02  [0.488s – 0.975s]  CNN=sa  RFC=sa
+  Seg 03  [0.975s – 1.509s]  CNN=sa  RFC=sa
+
+Classifying segments:  50%|█████     | 4/8 [00:00<00:00,  9.86it/s]  Seg 04  [1.509s – 1.927s]  CNN=ni  RFC=sa
+
+Classifying segments:  62%|██████▎   | 5/8 [00:00<00:00,  9.10it/s]  Seg 05  [1.927s – 2.415s]  CNN=sa  RFC=sa
+  Seg 06  [2.415s – 2.902s]  CNN=ma  RFC=ni
+
+Classifying segments:  88%|████████▊ | 7/8 [00:00<00:00, 10.62it/s]  Seg 07  [2.902s – 3.111s]  CNN=ni  RFC=dha
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00, 10.05it/s]  Seg 08  [3.111s – 3.428s]  CNN=ni  RFC=ni
+
+CNN+Attention : ni → sa → sa → ni → sa → ma → ni → ni
+RFC           : sa → sa → sa → sa → sa → ni → dha → ni
+
+
+Processing files:  42%|████▏     | 8/19 [00:18<00:25,  2.35s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test9.wav
+============================================================
+  [Edge] Dropping last boundary at 3.181s
+Boundaries detected: 5
+Classifying 6 segments...
+
+Classifying segments:   0%|          | 0/6 [00:00<?, ?it/s]
+Classifying segments:  17%|█▋        | 1/6 [00:00<00:00,  6.58it/s]
+Classifying segments:  33%|███▎      | 2/6 [00:00<00:00,  8.08it/s]  Seg 01  [0.000s – 0.557s]  CNN=ga  RFC=pa
+  Seg 02  [0.557s – 1.068s]  CNN=re  RFC=ni
+  Seg 03  [1.068s – 1.533s]  CNN=sa  RFC=sa
+
+Classifying segments:  67%|██████▋   | 4/6 [00:00<00:00, 10.92it/s]
+Classifying segments: 100%|██████████| 6/6 [00:00<00:00, 10.04it/s]  Seg 04  [1.533s – 1.950s]  CNN=ga  RFC=pa
+  Seg 05  [1.950s – 2.415s]  CNN=ni  RFC=ni
+  Seg 06  [2.415s – 3.386s]  CNN=sa  RFC=sa
+
+CNN+Attention : ga → re → sa → ga → ni → sa
+RFC           : pa → ni → sa → pa → ni → sa
+
+
+Processing files:  47%|████▋     | 9/19 [00:21<00:23,  2.37s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test10.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  8.32it/s]  Seg 01  [0.000s – 0.534s]  CNN=re  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  6.72it/s]  Seg 02  [0.534s – 1.022s]  CNN=sa  RFC=sa
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  7.32it/s]  Seg 03  [1.022s – 1.579s]  CNN=sa  RFC=ni
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.73it/s]  Seg 04  [1.579s – 1.997s]  CNN=ma  RFC=re
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.62it/s]  Seg 05  [1.997s – 2.461s]  CNN=sa  RFC=sa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  8.10it/s]  Seg 06  [2.461s – 2.949s]  CNN=ni  RFC=ni
+  Seg 07  [2.949s – 3.489s]  CNN=dha  RFC=dha
+
+
+CNN+Attention : re → sa → sa → ma → sa → ni → dha
+RFC           : sa → sa → ni → re → sa → ni → dha
+
+Processing files:  53%|█████▎    | 10/19 [00:24<00:22,  2.50s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test11.wav
+============================================================
+Boundaries detected: 3
+Classifying 4 segments...
+
+Classifying segments:   0%|          | 0/4 [00:00<?, ?it/s]
+Classifying segments:  25%|██▌       | 1/4 [00:00<00:00,  7.70it/s]
+Classifying segments:  50%|█████     | 2/4 [00:00<00:00,  7.67it/s]  Seg 01  [0.000s – 1.509s]  CNN=sa  RFC=dha
+  Seg 02  [1.509s – 2.461s]  CNN=sa  RFC=sa
+
+Classifying segments:  75%|███████▌  | 3/4 [00:00<00:00,  7.72it/s]
+Classifying segments: 100%|██████████| 4/4 [00:00<00:00,  7.66it/s]  Seg 03  [2.461s – 2.926s]  CNN=dha  RFC=dha
+  Seg 04  [2.926s – 3.404s]  CNN=ga  RFC=pa
+
+CNN+Attention : sa → sa → dha → ga
+RFC           : dha → sa → dha → pa
+
+
+Processing files:  58%|█████▊    | 11/19 [00:26<00:20,  2.56s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test12.wav
+============================================================
+  [Edge] Dropping last boundary at 3.181s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.534s]  CNN=ni  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.26it/s]  Seg 02  [0.534s – 0.998s]  CNN=dha  RFC=dha
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  7.57it/s]  Seg 03  [0.998s – 1.509s]  CNN=pa  RFC=pa
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.76it/s]  Seg 04  [1.509s – 2.020s]  CNN=ni  RFC=ni
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  7.78it/s]  Seg 05  [2.020s – 2.485s]  CNN=dha  RFC=dha
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  7.52it/s]  Seg 06  [2.485s – 2.902s]  CNN=pa  RFC=pa
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  7.71it/s]  Seg 07  [2.902s – 3.348s]  CNN=ma  RFC=ma
+
+CNN+Attention : ni → dha → pa → ni → dha → pa → ma
+RFC           : sa → dha → pa → ni → dha → pa → ma
+
+
+Processing files:  63%|██████▎   | 12/19 [00:29<00:18,  2.62s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test13.wav
+============================================================
+  [Edge] Dropping last boundary at 3.181s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  7.63it/s]  Seg 01  [0.000s – 0.534s]  CNN=dha  RFC=pa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  8.03it/s]  Seg 02  [0.534s – 0.998s]  CNN=pa  RFC=pa
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  8.20it/s]  Seg 03  [0.998s – 1.556s]  CNN=ma  RFC=ma
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  8.58it/s]  Seg 04  [1.556s – 1.997s]  CNN=dha  RFC=dha
+  Seg 05  [1.997s – 2.229s]  CNN=ma  RFC=ma
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  9.01it/s]
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  8.58it/s]  Seg 06  [2.229s – 2.577s]  CNN=ga  RFC=pa
+  Seg 07  [2.577s – 3.414s]  CNN=ma  RFC=ma
+
+CNN+Attention : dha → pa → ma → dha → ma → ga → ma
+RFC           : pa → pa → ma → dha → ma → pa → ma
+
+
+Processing files:  68%|██████▊   | 13/19 [00:31<00:15,  2.56s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test14.wav
+============================================================
+  [Edge] Dropping last boundary at 3.228s
+Boundaries detected: 7
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  12%|█▎        | 1/8 [00:00<00:00,  8.88it/s]  Seg 01  [0.000s – 0.534s]  CNN=pa  RFC=pa
+
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  9.12it/s]  Seg 02  [0.534s – 0.975s]  CNN=ma  RFC=ma
+
+Classifying segments:  50%|█████     | 4/8 [00:00<00:00, 10.80it/s]  Seg 03  [0.975s – 1.184s]  CNN=ma  RFC=ma
+  Seg 04  [1.184s – 1.486s]  CNN=ni  RFC=ga
+  Seg 05  [1.486s – 1.974s]  CNN=pa  RFC=pa
+
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00,  9.77it/s]  Seg 06  [1.974s – 2.438s]  CNN=ma  RFC=ma
+
+Classifying segments:  88%|████████▊ | 7/8 [00:00<00:00,  9.32it/s]  Seg 07  [2.438s – 2.949s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00,  9.42it/s]  Seg 08  [2.949s – 3.423s]  CNN=re  RFC=re
+
+CNN+Attention : pa → ma → ma → ni → pa → ma → ga → re
+RFC           : pa → ma → ma → ga → pa → ma → ga → re
+
+
+Processing files:  74%|███████▎  | 14/19 [00:34<00:12,  2.53s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test15.wav
+============================================================
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.511s]  CNN=ma  RFC=ma
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00, 10.15it/s]  Seg 02  [0.511s – 0.975s]  CNN=ga  RFC=ga
+  Seg 03  [0.975s – 1.509s]  CNN=sa  RFC=re
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  9.28it/s]  Seg 04  [1.509s – 1.927s]  CNN=ma  RFC=ma
+
+Classifying segments:  71%|███████▏  | 5/7 [00:00<00:00,  9.03it/s]  Seg 05  [1.927s – 2.438s]  CNN=ga  RFC=ga
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  8.87it/s]  Seg 06  [2.438s – 2.949s]  CNN=re  RFC=re
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  8.76it/s]  Seg 07  [2.949s – 3.414s]  CNN=sa  RFC=sa
+
+CNN+Attention : ma → ga → sa → ma → ga → re → sa
+RFC           : ma → ga → re → ma → ga → re → sa
+
+
+Processing files:  79%|███████▉  | 15/19 [00:36<00:10,  2.50s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test16.wav
+============================================================
+  [Edge] Dropping last boundary at 3.111s
+Boundaries detected: 7
+  [Edge] Dropping short segment [0.975–1.161]s
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]
+Classifying segments:  14%|█▍        | 1/7 [00:00<00:00,  9.69it/s]  Seg 01  [0.000s – 0.488s]  CNN=sa  RFC=sa
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.18it/s]  Seg 02  [0.488s – 0.975s]  CNN=re  RFC=re
+  Seg 03  [1.161s – 1.486s]  CNN=ni  RFC=ga
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00, 10.35it/s]  Seg 04  [1.486s – 1.950s]  CNN=sa  RFC=sa
+  Seg 05  [1.950s – 2.415s]  CNN=re  RFC=re
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  9.71it/s]  Seg 06  [2.415s – 2.926s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  9.52it/s]  Seg 07  [2.926s – 3.386s]  CNN=ma  RFC=ma
+
+CNN+Attention : sa → re → ni → sa → re → ga → ma
+RFC           : sa → re → ga → sa → re → ga → ma
+
+
+Processing files:  84%|████████▍ | 16/19 [00:39<00:07,  2.60s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test17.wav
+============================================================
+  [Edge] Dropping last boundary at 3.204s
+Boundaries detected: 8
+  [Edge] Dropping short segment [0.000–0.116]s
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  12%|█▎        | 1/8 [00:00<00:00,  8.04it/s]
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  7.97it/s]  Seg 01  [0.116s – 0.511s]  CNN=re  RFC=re
+  Seg 02  [0.511s – 0.998s]  CNN=ga  RFC=ga
+
+Classifying segments:  38%|███▊      | 3/8 [00:00<00:00,  8.79it/s]  Seg 03  [0.998s – 1.231s]  CNN=ma  RFC=ma
+  Seg 04  [1.231s – 1.533s]  CNN=ni  RFC=ma
+
+Classifying segments:  62%|██████▎   | 5/8 [00:00<00:00,  8.60it/s]
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00,  8.73it/s]  Seg 05  [1.533s – 1.974s]  CNN=re  RFC=re
+  Seg 06  [1.974s – 2.438s]  CNN=ga  RFC=ga
+
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00,  8.62it/s]  Seg 07  [2.438s – 2.995s]  CNN=ma  RFC=ma
+  Seg 08  [2.995s – 3.475s]  CNN=pa  RFC=pa
+
+CNN+Attention : re → ga → ma → ni → re → ga → ma → pa
+RFC           : re → ga → ma → ma → re → ga → ma → pa
+
+
+Processing files:  89%|████████▉ | 17/19 [00:42<00:05,  2.81s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test18.wav
+============================================================
+  [Edge] Dropping last boundary at 3.181s
+Boundaries detected: 8
+  [Edge] Dropping short segment [1.045–1.231]s
+Classifying 8 segments...
+
+Classifying segments:   0%|          | 0/8 [00:00<?, ?it/s]
+Classifying segments:  12%|█▎        | 1/8 [00:00<00:00,  7.05it/s]
+Classifying segments:  25%|██▌       | 2/8 [00:00<00:00,  8.38it/s]  Seg 01  [0.000s – 0.557s]  CNN=ga  RFC=ga
+  Seg 02  [0.557s – 1.045s]  CNN=ma  RFC=ma
+
+Classifying segments:  38%|███▊      | 3/8 [00:00<00:00,  9.03it/s]
+Classifying segments:  50%|█████     | 4/8 [00:00<00:00,  8.70it/s]  Seg 03  [1.231s – 1.533s]  CNN=dha  RFC=pa
+  Seg 04  [1.533s – 1.997s]  CNN=ga  RFC=ga
+
+Classifying segments:  62%|██████▎   | 5/8 [00:00<00:00,  7.81it/s]
+Classifying segments:  75%|███████▌  | 6/8 [00:00<00:00,  7.97it/s]  Seg 05  [1.997s – 2.485s]  CNN=ma  RFC=ma
+  Seg 06  [2.485s – 2.717s]  CNN=ma  RFC=ma
+
+Classifying segments:  88%|████████▊ | 7/8 [00:00<00:00,  8.15it/s]
+Classifying segments: 100%|██████████| 8/8 [00:00<00:00,  8.14it/s]  Seg 07  [2.717s – 2.995s]  CNN=ga  RFC=ga
+  Seg 08  [2.995s – 3.470s]  CNN=ni  RFC=dha
+
+CNN+Attention : ga → ma → dha → ga → ma → ma → ga → ni
+RFC           : ga → ma → pa → ga → ma → ma → ga → dha
+
+
+Processing files:  95%|█████████▍| 18/19 [00:46<00:02,  2.98s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+Processing: test19.wav
+============================================================
+  [Edge] Dropping last boundary at 3.111s
+Boundaries detected: 6
+Classifying 7 segments...
+
+Classifying segments:   0%|          | 0/7 [00:00<?, ?it/s]  Seg 01  [0.000s – 0.488s]  CNN=ma  RFC=ma
+
+Classifying segments:  29%|██▊       | 2/7 [00:00<00:00,  9.98it/s]  Seg 02  [0.488s – 0.975s]  CNN=pa  RFC=ga
+
+Classifying segments:  43%|████▎     | 3/7 [00:00<00:00,  9.62it/s]  Seg 03  [0.975s – 1.509s]  CNN=dha  RFC=dha
+
+Classifying segments:  57%|█████▋    | 4/7 [00:00<00:00,  7.85it/s]  Seg 04  [1.509s – 1.927s]  CNN=ma  RFC=ma
+
+Classifying segments:  86%|████████▌ | 6/7 [00:00<00:00,  8.85it/s]  Seg 05  [1.927s – 2.415s]  CNN=pa  RFC=pa
+  Seg 06  [2.415s – 2.879s]  CNN=dha  RFC=dha
+
+Classifying segments: 100%|██████████| 7/7 [00:00<00:00,  8.81it/s]
+  Seg 07  [2.879s – 3.357s]  CNN=ni  RFC=sa
+
+CNN+Attention : ma → pa → dha → ma → pa → dha → ni
+RFC           : ma → ga → dha → ma → pa → dha → sa
+
+Processing files: 100%|██████████| 19/19 [00:48<00:00,  2.57s/it]Saved visualization → /content/E5_pipeline_output.png
+
+============================================================
+experiment  clip_name  n_segments                                    cnn_sequence                                    rfc_sequence
+        E5  test1.wav          10 sa → re → re → sa → re → sa → re → ga → re → ga sa → sa → sa → sa → re → sa → re → ga → re → ga
+        E5  test2.wav           7                sa → re → ni → sa → re → ga → ma                sa → re → ga → sa → re → ga → ma
+        E5  test3.wav           6                     re → ga → re → ga → ma → ni                     re → ga → re → ga → ma → pa
+        E5  test4.wav           7              ga → ma → dha → ga → ma → pa → dha               ga → ma → pa → ga → ma → pa → dha
+        E5  test5.wav           7              ma → pa → dha → ma → pa → dha → ni              ma → pa → dha → ma → ga → dha → sa
+        E5  test6.wav           8        pa → dha → ni → dha → pa → dha → ni → sa          pa → dha → ma → sa → pa → ma → ni → sa
+        E5  test7.wav           7              dha → ni → sa → dha → ni → sa → ma              dha → ni → sa → dha → ni → sa → sa
+        E5  test8.wav           8           ni → sa → sa → ni → sa → ma → ni → ni          sa → sa → sa → sa → sa → ni → dha → ni
+        E5  test9.wav           6                     ga → re → sa → ga → ni → sa                     pa → ni → sa → pa → ni → sa
+        E5 test10.wav           7               re → sa → sa → ma → sa → ni → dha               sa → sa → ni → re → sa → ni → dha
+        E5 test11.wav           4                              sa → sa → dha → ga                             dha → sa → dha → pa
+        E5 test12.wav           7              ni → dha → pa → ni → dha → pa → ma              sa → dha → pa → ni → dha → pa → ma
+        E5 test13.wav           7              dha → pa → ma → dha → ma → ga → ma               pa → pa → ma → dha → ma → pa → ma
+        E5 test14.wav           8           pa → ma → ma → ni → pa → ma → ga → re           pa → ma → ma → ga → pa → ma → ga → re
+        E5 test15.wav           7                ma → ga → sa → ma → ga → re → sa                ma → ga → re → ma → ga → re → sa
+        E5 test16.wav           7                sa → re → ni → sa → re → ga → ma                sa → re → ga → sa → re → ga → ma
+        E5 test17.wav           8           re → ga → ma → ni → re → ga → ma → pa           re → ga → ma → ma → re → ga → ma → pa
+        E5 test18.wav           8          ga → ma → dha → ga → ma → ma → ga → ni          ga → ma → pa → ga → ma → ma → ga → dha
+        E5 test19.wav           7              ma → pa → dha → ma → pa → dha → ni              ma → ga → dha → ma → pa → dha → sa
+
+Saved → /content/E5_results.csv
+
+

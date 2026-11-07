@@ -1,0 +1,16 @@
+\chapter{Future Work}
+\label{ch:future-work}
+
+The proposed framework provides a foundation for automatic swara segmentation and classification using synthetically generated melodies. Although the obtained results are promising, several directions exist for extending and improving the proposed system.
+
+The most immediate future work is to evaluate the proposed pipeline on other monophonic musical instruments. While this study focused exclusively on flute recordings, the underlying methodology is independent of any instrument-specific characteristics. By replacing the isolated note recordings with those of other monophonic instruments, such as the violin, recorder, clarinet, saxophone, or similar instruments, the same synthetic melody generation pipeline can be employed to create automatically annotated datasets. Experimental validation across multiple instruments would provide stronger evidence regarding the generalization capability of the proposed framework.
+
+Another important extension is the inclusion of more expressive musical techniques commonly observed in Indian classical music. The current work considers only the seven fundamental swaras, whereas practical performances frequently contain ornamentations such as Meend, Gamak, Murki, and Kan Swara. Incorporating these expressive elements into the synthetic melody generation process would enable the proposed framework to operate on more realistic and musically complex performances.
+
+Although the proposed synthetic dataset successfully reduced the need for manually annotated continuous recordings, future work may further enhance the realism of the generated melodies. More sophisticated transition modeling, performer-specific playing styles, breathing effects, expressive dynamics, and additional acoustic augmentations could be incorporated to better simulate professional performances. Such improvements would further narrow the gap between synthetic and real-world musical recordings.
+
+Since the synthetic melody generation process is fully automated, future research could investigate generating substantially larger datasets with thousands or even millions of automatically annotated melodies. Such large-scale synthetic datasets may facilitate the training of more complex deep learning models while eliminating the need for extensive manual annotation.
+
+Future research may also investigate more advanced deep learning architectures. While this work employed CNN with Attention and CRNN with Attention models, recent sequence modeling techniques such as Transformer-based architectures, Conformers, and self-supervised audio representation models could potentially improve both segmentation and classification performance, particularly for longer and more complex musical recordings.
+
+Finally, the proposed framework can be extended toward a complete real-time automatic music transcription system. Integrating segmentation, swara classification, notation generation, and visualization into a single application would enable musicians, educators, and researchers to analyze monophonic performances automatically. Such a system could support music education, digital archiving of traditional performances, and future music information retrieval applications.

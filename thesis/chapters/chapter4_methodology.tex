@@ -1,0 +1,286 @@
+\chapter{Methodology}
+\label{ch:methodology}
+
+\section{Overview}
+
+This chapter describes the proposed end-to-end framework for automatic swara transcription from continuous Indian classical flute melodies. The proposed system consists of two major stages: note segmentation and swara classification. The segmentation model first identifies the boundaries of individual notes from a continuous melody. The segmented notes are then passed to the classification model, which predicts the corresponding swara for each note. Finally, the outputs of both models are combined to generate the complete swara transcription of the input melody.
+
+Our general pipeline consists of the following phases:
+\begin{enumerate}
+    \item Data Collection
+    \item Synthetic Melody Data Creation
+    \item Segmentation model (RCNN + Attention)
+    \begin{enumerate}
+        \item Extract Melody features
+        \item Use synthetic data and extracted features to train the model
+        \item Evaluate segmentation success in actual melodies
+    \end{enumerate}
+    \item Classification Model (CNN + Attention)
+    \begin{enumerate}
+        \item Extract Individual Swara features
+        \item Use extracted features to train the classification model
+        \item Evaluation
+    \end{enumerate}
+    \item Merge Both Models
+    \item Upload test melodies and evaluate
+\end{enumerate}
+
+The proposed framework was divided into two sequential stages: note segmentation and swara classification. This design was adopted because the two tasks solve fundamentally different problems. The segmentation model is responsible for identifying the temporal boundaries of individual notes within a continuous melody, whereas the classification model predicts the corresponding swara of each segmented note. Since the classification model was trained using isolated swara recordings, it requires individual note segments as input rather than continuous melodies. Therefore, accurate segmentation is an essential prerequisite for reliable swara classification. Furthermore, separating the pipeline enables independent evaluation of both stages, allowing segmentation and classification performance to be analyzed individually while simplifying model development, debugging, and future improvements.
+
+\figplaceholder{fig7_methodology_overview.png}{Methodology Overview}{fig:methodology-overview}
+
+\section{Overall Pipeline}
+
+\subsection{Data Collection}
+
+The first stage of the proposed framework involves collecting isolated recordings of the seven fundamental swaras of the Indian classical music scale: Sa, Re, Ga, Ma, Pa, Dha, and Ni. A total of 748 individual swara recordings were collected from both publicly available sources and self-recorded flute performances. Each recording was manually organized into separate folders according to its corresponding swara class. Each recording was later resampled to 16 kHz, mono-channel, and .wav format.
+
+These isolated recordings serve as the foundation of the proposed pipeline. They are used for two primary purposes: (i) generating the synthetic melody dataset required for training the segmentation model, and (ii) training the swara classification model to recognize individual notes. A detailed description of the data collection procedure, preprocessing steps, and dataset statistics is provided in Chapter~\ref{ch:dataset}.
+
+\paragraph{Data Splitting.} For the classification model, the isolated swara dataset was split into 80-10-10 for train/test/validation, and a similar split was applied to the synthetic melodies for segmentation training. Feature extraction was conducted and split according to the train-test-validation split.
+
+\subsection{Feature Extraction}
+
+For both segmentation and classification training, several features were extracted from the audio files:
+
+\begin{enumerate}
+    \item[I.] \textbf{MFCC}: A compact representation of the spectral characteristics of audio that is widely used in speech and audio recognition tasks.
+
+    \figplaceholder{fig8_mfcc_visualization.png}{MFCC visualization of an individual note}{fig:mfcc}
+
+    \item[II.] \textbf{Log-Mel Spectrogram}: A logarithmically scaled Mel spectrogram that preserves more spectral information than MFCC while maintaining perceptual frequency scaling.
+
+    \figplaceholder{fig9_logmel_visualization.png}{Log-Mel spectrogram visualization of an individual note}{fig:logmel}
+
+    \item[III.] \textbf{Pitch}: Represents the fundamental frequency (F0) of the audio signal and provides direct information about musical note frequencies.
+
+    \figplaceholder{fig10_pitch_visualization.png}{Pitch visualization of an individual note}{fig:pitch}
+
+    \item[IV.] \textbf{Root Mean Square (RMS) Energy}: Measures the short-term energy of the signal and assists in detecting note onsets and offsets.
+
+    \figplaceholder{fig11_rms_visualization.png}{RMS energy visualization of an individual note}{fig:rms}
+
+    \item[V.] \textbf{Constant-Q Transform (CQT)}: A logarithmically spaced time-frequency representation specifically designed for musical signals. Since musical notes are naturally distributed on a logarithmic frequency scale, CQT provides improved frequency resolution for note recognition and transcription tasks.
+
+    \figplaceholder{fig12_cqt_visualization.png}{Constant-Q Transform visualization of an individual note}{fig:cqt}
+\end{enumerate}
+
+Mel-frequency cepstral coefficients (MFCCs) are one of the most widely used feature representations in speech and audio classification tasks due to their compact representation of spectral characteristics. Preliminary feature extraction was performed using MFCCs during the early stages of this research. However, MFCCs provide a compressed cepstral representation that discards a significant portion of the detailed spectral information contained in the original signal.
+
+To preserve richer time-frequency characteristics, the proposed framework ultimately employs log-Mel spectrograms as the primary spectral representation. Log-Mel spectrograms retain the two-dimensional spectral structure while remaining perceptually motivated, making them more suitable for convolutional neural networks. Additional pitch and RMS energy features were incorporated to provide complementary harmonic and energy information.
+
+\subsection{Experiments}
+
+To evaluate the effectiveness of different acoustic feature representations for automatic swara segmentation and classification, six experiments were conducted using the same overall processing pipeline. In all experiments, the dataset, preprocessing procedures, model architecture, training parameters, and evaluation metrics were kept identical. The only variable modified between experiments was the input feature representation. This controlled experimental design ensured that any observed differences in performance could be attributed solely to the extracted features rather than variations in the training process or model configuration.
+
+The experimental pipeline begins with the preprocessing of the input audio, followed by feature extraction using one of the selected acoustic representations. The extracted features are then provided as input to the proposed deep learning architecture for training and inference. Finally, the trained models are evaluated using the same testing dataset and performance metrics, enabling a fair comparison of the effectiveness of each feature representation.
+
+\paragraph{Experiment I: Log-Mel Spectrogram.} Log-Mel spectrograms were selected as the baseline spectral representation because they preserve detailed time-frequency information while approximating the frequency perception of the human auditory system. Unlike compressed cepstral features, Log-Mel spectrograms retain the two-dimensional spectral structure, making them highly suitable for convolutional neural networks.
+
+\paragraph{Experiment II: Pitch.} Pitch information was evaluated independently to determine whether the fundamental frequency alone is sufficient for identifying individual swaras. Since each swara corresponds to a distinct musical pitch, this experiment investigates the discriminative capability of pitch without additional spectral information.
+
+\paragraph{Experiment III: RMS Energy.} Root Mean Square (RMS) energy was evaluated independently to analyze the contribution of signal energy to segmentation and classification. Changes in energy often coincide with note boundaries and articulation, making RMS a potentially useful cue for detecting transitions between consecutive notes.
+
+\paragraph{Experiment IV: Log-Mel Spectrogram + Pitch.} This experiment combines spectral information with explicit pitch estimation. While the Log-Mel spectrogram captures the complete spectral characteristics of the audio signal, the pitch representation provides direct information about the fundamental frequency. The combination was expected to improve the discrimination between swaras with similar spectral characteristics.
+
+\paragraph{Experiment V: Log-Mel Spectrogram + Pitch + RMS.} The fifth experiment integrates spectral, harmonic, and energy-based information into a unified feature representation. Log-Mel spectrograms provide detailed spectral content, pitch captures melodic information, and RMS contributes temporal energy variations associated with note transitions. The objective was to determine whether these complementary features collectively improve segmentation and classification performance.
+
+\paragraph{Experiment VI: Constant-Q Transform (CQT).} The Constant-Q Transform was evaluated because its logarithmically spaced frequency bins closely match the musical scale, providing higher frequency resolution at lower frequencies and higher temporal resolution at higher frequencies. Since swaras correspond to discrete musical notes, CQT offers a musically meaningful representation and was expected to capture pitch-related characteristics more effectively than conventional spectral representations.
+
+\begin{table}[H]
+\centering
+\caption{Experiment Table}
+\label{tab:experiment-table}
+\begin{tabular}{lll}
+\toprule
+\textbf{Experiment} & \textbf{Feature Representation} & \textbf{Motivation} \\
+\midrule
+Experiment 1 & Log-Mel & Baseline spectral representation \\
+Experiment 2 & Pitch & Harmonic information only \\
+Experiment 3 & RMS & Energy information only \\
+Experiment 4 & Log-Mel + Pitch & Spectral + harmonic features \\
+Experiment 5 & Log-Mel + Pitch + RMS & Multi-feature fusion \\
+Experiment 6 & CQT & Musically aligned frequency representation \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Models}
+
+\subsubsection*{Segmentation Model}
+
+The proposed swara segmentation model is based on a Convolutional Recurrent Neural Network (CRNN) enhanced with an attention mechanism. The model was designed to detect the temporal boundaries between consecutive swaras in continuous flute melodies. The convolutional layers extract local spectral patterns from the input feature representation, while the recurrent layers capture long-term temporal dependencies across the audio sequence. Finally, the attention mechanism emphasizes informative temporal regions, enabling the network to accurately identify note transition boundaries. The model was trained using the synthetic melody dataset described in Chapter~\ref{ch:dataset}, where frame-level ground-truth annotations were automatically generated during melody synthesis.
+
+To ensure a fair comparison across all feature extraction experiments, the segmentation architecture and training configuration remained identical throughout Experiments I--V. The only modification between experiments was the number of input channels, corresponding to the selected feature representation. Single-feature experiments (Log-Mel, Pitch, and RMS) utilized one input channel, whereas feature fusion experiments employed two (Log-Mel + Pitch) and three (Log-Mel + Pitch + RMS) input channels, respectively. The CQT experiment followed the same segmentation framework while replacing the input representation with the Constant-Q Transform.
+
+\begin{table}[H]
+\centering
+\caption{Segmentation Model Architecture}
+\label{tab:segmentation-arch}
+\begin{tabular}{ll}
+\toprule
+\textbf{Component} & \textbf{Description} \\
+\midrule
+Model & CRNN (Convolutional Recurrent Neural Network) \\
+Input & Feature tensor of size $C \times 128 \times T$ \\
+Input Channels & 1 (Log-Mel / Pitch / RMS), 2 (Log-Mel + Pitch), \\
+ & 3 (Log-Mel + Pitch + RMS), 1 (CQT) \\
+Convolution Block & Two Conv2D blocks with Batch Normalization, \\
+ & ReLU activation, and Max Pooling \\
+Attention Layer & Temporal attention for emphasizing important frames \\
+Recurrent Layers & Bidirectional LSTM layer; captures temporal \\
+ & dependencies between consecutive frames \\
+Output Layer & Sigmoid activation producing boundary probabilities \\
+Objective & Detect swara transition boundaries in continuous melodies \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Segmentation Training Configuration}
+\label{tab:segmentation-training}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Dataset & Synthetic Melody Dataset \\
+Training/Validation Split & 80\% / 20\% \\
+Random Seed & 42 \\
+Batch Size & 8 \\
+Number of Epochs & 25 \\
+Optimizer & Adam \\
+Initial Learning Rate & 0.001 \\
+Learning Rate Scheduler & ReduceLROnPlateau \\
+Scheduler Patience & 3 Epochs \\
+Scheduler Reduction Factor & 0.5 \\
+Loss Function & Binary Cross-Entropy with Logits Loss (BCEWithLogitsLoss) \\
+Positive Class Weight & 15 \\
+Evaluation Metrics & Precision, Recall, F1-score \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Since swara boundary frames represent only a small proportion of the total audio frames, the segmentation task exhibits significant class imbalance. To address this issue, Binary Cross-Entropy with Logits Loss was employed with a positive class weight of 15, assigning greater importance to boundary frames during optimization. Since melody recordings exhibit varying durations, all feature sequences were padded to a fixed length prior to batch training. During loss computation, a binary mask was applied to exclude padded frames from contributing to the optimization process, ensuring that the model learned exclusively from valid audio samples. Model performance was evaluated using Precision, Recall, and F1-score, providing a comprehensive assessment of boundary detection accuracy.
+
+\subsubsection*{Classification Model}
+
+The proposed swara classification model is based on a Convolutional Neural Network (CNN) enhanced with an attention mechanism. Following the segmentation stage, each isolated swara is converted into the selected feature representation and provided as input to the classifier. The convolutional layers learn discriminative spectral characteristics from the extracted features, while the attention mechanism emphasizes the most informative regions of the feature maps, enabling the network to focus on the acoustic characteristics that best distinguish individual swaras. Finally, the fully connected output layer predicts one of the seven swara classes (Sa, Re, Ga, Ma, Pa, Dha, and Ni).
+
+To ensure a fair comparison across all feature extraction experiments, the classification architecture and training configuration remained identical throughout Experiments I--V. The only modification between experiments was the number of input channels corresponding to the selected feature representation. Single-feature experiments (Log-Mel, Pitch, and RMS) utilized one input channel, while feature fusion experiments employed two (Log-Mel + Pitch) and three (Log-Mel + Pitch + RMS) input channels, respectively. The CQT experiment followed the same classification framework while replacing the input representation with the Constant-Q Transform.
+
+\begin{table}[H]
+\centering
+\caption{Classification Model Architecture}
+\label{tab:classification-arch}
+\begin{tabular}{ll}
+\toprule
+\textbf{Component} & \textbf{Description} \\
+\midrule
+Model & CNN \\
+Attention Layer & Spatial attention mechanism for emphasizing informative feature regions \\
+Input & Feature tensor of size $C \times 64 \times 128$ \\
+Input Channels & 1 (Log-Mel / Pitch / RMS), 2 (Log-Mel + Pitch), \\
+ & 3 (Log-Mel + Pitch + RMS), 1 (CQT) \\
+Convolution Block & Three Conv2D blocks with Batch Normalization, \\
+ & ReLU activation, and Max Pooling \\
+Adaptive Pooling & Adaptive Average Pooling to aggregate spectral \\
+ & information while preserving temporal resolution \\
+Fully Connected Layer & Maps extracted features to swara classes \\
+Output Layer & Fully connected layer producing probabilities for seven swara classes \\
+Objective & Classify segmented notes into one of the seven swara classes \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Classification Training Configuration}
+\label{tab:classification-training}
+\begin{tabular}{ll}
+\toprule
+\textbf{Parameter} & \textbf{Value} \\
+\midrule
+Dataset & Individual Swara Dataset \\
+Training/Validation Split & 80\% / 20\% \\
+Random Seed & 42 \\
+Batch Size & 32 \\
+Number of Epochs & 25 \\
+Optimizer & Adam \\
+Initial Learning Rate & 0.001 \\
+Learning Rate Scheduler & ReduceLROnPlateau \\
+Scheduler Patience & 3 Epochs \\
+Scheduler Reduction Factor & 0.5 \\
+Loss Function & Cross-Entropy Loss \\
+Evaluation Metrics & Accuracy, Precision, Recall, F1-score \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The classification model was trained using the individual swara dataset described in Chapter~\ref{ch:dataset}. All feature tensors were padded or truncated to a fixed temporal length to ensure uniform input dimensions during batch training. The network parameters were optimized using the Adam optimizer with an initial learning rate of 0.001. A ReduceLROnPlateau scheduler was employed to automatically decrease the learning rate when the validation loss plateaued, promoting stable convergence throughout training. Model performance was evaluated using the same validation protocol across all experiments, ensuring that differences in classification performance were solely attributable to the selected feature representation.
+
+\subsubsection*{Attention Mechanism}
+
+Integrating an attention mechanism into a CRNN for audio segmentation provides a substantial improvement by allowing the network to dynamically focus on the most relevant parts of a sequence rather than treating every time frame equally. In complex audio streams, such as a continuous recording containing overlapping sounds or varying acoustic environments, different segments carry vastly different levels of importance. While recurrent layers like LSTMs process inputs sequentially, they can struggle to retain long-range context over extended audio clips. Attention mechanisms solve this by computing weighted importance scores across all time steps simultaneously, enabling the model to attend directly to critical transitional boundaries or specific event markers (such as the exact start and end of a note). This drastically improves temporal precision during audio segmentation.
+
+When applied to a standalone CNN for audio classification, attention mechanisms (often implemented as spatial or channel-wise attention blocks, such as Squeeze-and-Excitation networks) elevate performance by highlighting the most informative spectral regions of a Mel-spectrogram. In audio classification, a CNN extracts local texture and frequency features, but not all frequency bands or harmonic patterns contribute equally to identifying a sound class. Attention allows the model to adaptively amplify feature maps corresponding to discriminative acoustic cues, such as a specific formant or a distinct high-frequency component, while suppressing background noise or irrelevant frequencies. By selectively weighting these feature channels and spatial regions, the CNN becomes significantly more robust and accurate, even when dealing with noisy or complex audio data.
+
+\figplaceholder{fig13_attention_mechanism_diagram.png}{Architectural diagram of the attention mechanism}{fig:attention-diagram}
+
+\subsection{Training Configurations}
+
+All experiments were implemented in Python using the PyTorch deep learning framework and executed on the Google Colab platform. Model training and evaluation were accelerated using an NVIDIA Tesla T4 Graphics Processing Unit (GPU), enabling efficient processing of both the segmentation and classification models. Identical training configurations were maintained across all experiments to ensure a fair comparison between different feature representations. The detailed software and hardware specifications used in this study are summarized in Table~\ref{tab:experimental-environment}.
+
+\begin{table}[H]
+\centering
+\caption{Experimental Environment}
+\label{tab:experimental-environment}
+\begin{tabular}{ll}
+\toprule
+\textbf{Component} & \textbf{Specification} \\
+\midrule
+Programming Language & Python 3 \\
+Deep Learning Framework & PyTorch \\
+Audio Processing Library & Librosa \\
+Numerical Computing & NumPy \\
+Data Manipulation & Pandas \\
+Visualization & Matplotlib \\
+Development Environment & Google Colab \\
+Hardware Accelerator & NVIDIA Tesla T4 GPU \\
+Operating Environment & Ubuntu (Google Colab Runtime) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Evaluation Metrics}
+
+The performance of the proposed framework was evaluated using several widely adopted classification and segmentation metrics, including Accuracy, Precision, Recall, and F1-score. These metrics provide complementary insights into the effectiveness of the proposed models by measuring both the correctness of predictions and the ability to accurately detect swara boundaries.
+
+\textbf{Accuracy:} It measures the overall proportion of correctly predicted samples among all predictions and is defined as
+\begin{equation}
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\end{equation}
+where $TP$, $TN$, $FP$, and $FN$ denote True Positives, True Negatives, False Positives, and False Negatives, respectively.
+
+\textbf{Precision:} It evaluates the proportion of predicted positive samples that are actually correct. It measures how reliable the positive predictions of the model are and is expressed as
+\begin{equation}
+\text{Precision} = \frac{TP}{TP + FP}
+\end{equation}
+
+\textbf{Recall:} It measures the ability of the model to correctly identify all positive samples and is calculated as
+\begin{equation}
+\text{Recall} = \frac{TP}{TP + FN}
+\end{equation}
+
+The F1-score is the harmonic mean of Precision and Recall, providing a balanced evaluation when both false positives and false negatives are important. It is computed as
+\begin{equation}
+F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\end{equation}
+
+The F1-score is particularly suitable for imbalanced datasets, where relying solely on Accuracy may produce misleading conclusions.
+
+\paragraph{Evaluation Protocol.} Different evaluation metrics were employed for the segmentation and classification tasks according to their respective objectives.
+
+For the classification model, Accuracy and F1-score were selected as the primary evaluation metrics. Accuracy measures the overall correctness of swara prediction, while the F1-score provides a balanced assessment of classification performance by considering both Precision and Recall, making it more suitable when class distributions are not perfectly uniform.
+
+For the segmentation model, Precision, Recall, and F1-score were used to evaluate the detection of swara boundaries. Precision measures how many predicted boundaries correspond to actual swara transitions, Recall measures how many true boundaries are successfully detected, and the F1-score provides a balanced measure of segmentation performance by combining both metrics.

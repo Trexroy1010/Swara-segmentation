@@ -1,0 +1,20 @@
+experiment,clip_name,n_segments,cnn_sequence,rfc_sequence
+E1,test1.wav,10,sa   re   re   sa   re   sa   re   ga   re   ga,sa   sa   re   sa   re   sa   re   ga   re   ma
+E1,test2.wav,7,sa   re   ga   sa   re   ga   ma,sa   re   ga   sa   re   ga   ma
+E1,test3.wav,7,re   ga   ma   re   ga   ma   re,re   re   ma   re   re   ma   ma
+E1,test4.wav,6,ga   ma   ga   ma   pa   dha,ga   ma   ga   ma   pa   dha
+E1,test5.wav,7,ma   pa   dha   ma   pa   dha   ni,ma   pa   dha   ma   pa   dha   ni
+E1,test6.wav,8,pa   dha   dha   pa   dha   dha   ni   sa,pa   dha   dha   pa   ma   sa   sa   sa
+E1,test7.wav,7,dha   ni   sa   dha   ni   sa   ma,dha   ni   sa   dha   ni   sa   re
+E1,test8.wav,7,ni   sa   sa   ni   sa   ma   ma,sa   sa   re   ni   sa   ni   dha
+E1,test9.wav,6,ga   dha   sa   ga   sa   sa,dha   ni   sa   ni   ni   sa
+E1,test10.wav,7,re   sa   dha   ma   sa   ni   dha,re   sa   sa   re   sa   ni   dha
+E1,test11.wav,6,sa   ni   dha   sa   dha   re,sa   ni   dha   sa   dha   pa
+E1,test12.wav,7,ni   dha   pa   ni   dha   pa   ma,sa   dha   pa   ni   dha   pa   ma
+E1,test13.wav,7,dha   pa   ma   dha   ga   ma   ga,dha   pa   ma   dha   pa   ma   ma
+E1,test14.wav,7,pa   ma   ma   pa   ma   ga   re,pa   ma   ma   pa   ma   ma   re
+E1,test15.wav,7,ma   ga   re   ma   ga   re   sa,ma   ma   re   ma   ga   re   sa
+E1,test16.wav,8,sa   re   ni   ga   sa   re   ga   ma,sa   re   re   ma   sa   re   ga   ma
+E1,test17.wav,7,re   ga   ma   re   ga   ma   re,re   re   ma   re   re   re   pa
+E1,test18.wav,8,ga   ma   ni   ga   ma   dha   ga   dha,ga   ma   pa   ga   re   ma   ga   dha
+E1,test19.wav,7,ma   pa   dha   ma   pa   dha   dha,ma   pa   dha   ma   pa   dha   ni
